@@ -1,0 +1,34 @@
+<erl>
+
+out(A) -> 
+    yaws_api:ssi(A#arg.docroot, ["/HEAD", "/TOPTAB"]).
+	    
+</erl>
+
+
+
+<H2>TODO</H2>
+
+<ul>
+
+<li> respect client side Cache-Control: no-cache
+<li> clusters 
+<li> handle the If-..... headers 
+<li> handle Range header
+<li> TRACE, PUT, OPTIONS ......
+<li> more documentation in the www directory
+<li> more functions in yaws_api  push() ....
+<li> lots of examples
+<li> do something cool, maybe a streaming audio app
+<li> shell access into the daemon .... no bad idea
+<li> HTTP trailer support
+<li> substitution in ssi pages as well as regular pages
+<li> a CGI interface
+</ul>
+
+
+
+<erl>
+out(A) -> yaws_api:ssi(A#arg.docroot, ["/END"]).
+</erl>
+
