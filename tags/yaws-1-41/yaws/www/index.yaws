@@ -1,0 +1,79 @@
+<erl>
+
+
+out(A) ->
+    [{ssi, "HEAD",[],[]},
+     {ssi, "TOPTAB", [],[]},
+     {ehtml,
+      [{h2,[],"Yaws"},
+       {p,[],"Yaws is a HTTP high perfomance 1.1 webserver."
+	"Two separate modes of operations are supported."},
+       {ul,[],
+	[{li,[],
+	  {p,[],"Standalone mode where yaws runs as a regular webserver " 
+	   "daemon. This is the default mode."}},
+	 {li,[],
+	  {p,[], "Embedded mode where Yaws runs as an embedded webserver in an"
+	   "another erlang application."}}
+	]},
+       {p,[], ["Yaws is entirely written in ",
+	       {a, [{href, "http://www.erlang.org"}],  "Erlang"},
+	       " furthermore it is a multithreaded webserver where one "
+	       "Erlang light weight process is used to handle each client."]},
+       {p,[], "As matter of fact, the "
+	"ad-hockery of php was one of major reasons "
+	"I started the Yaws project."},
+       {p,[],"Furthermore, Yaws has excellent performance and is able to"
+	" ship several thousands of dynamically generated pages per second."},
+
+       {h2,[], "yaws.hyber.org"},
+
+       {p,[], ["The www page for Yaws is ",
+	       {a ,[{href,"http://yaws.hyber.org"}], "yaws.hyber.org"},
+	       " The documentation, examples as well as releases can be "
+	       "found there, and of cource, ",
+	       {a ,[{href,"http://yaws.hyber.org"}],"yaws.hyber.org"},
+	       " is itself powered by Yaws"]},
+
+       {p,[], ["A mailing list exists at: ",
+	       {a,[{href,"https://lists.sourceforge.net/lists/listinfo/""erlyaws-list"}],
+		"https://lists.sourceforge.net/lists/listinfo/erlyaws-list"}]},
+       {hr},
+       gen_news(A),
+       {ssi, "END",[],[]}
+      ]}].
+
+
+gen_news(A) ->
+    case file:open(A#arg.docroot ++ "/news",[read]) of
+	{ok, Fd} ->
+	    gen_news(Fd, io:get_line(Fd,''));
+	Err ->
+	    {p,[], f("No news: ~p",[Err])}
+    end.
+
+gen_news(Fd, eof) ->
+    file:close(Fd),
+    [];
+gen_news(Fd, Line) ->
+    Items = gen_items(Fd, io:get_line(Fd, '')),
+    X = [{'div', [{class, "box"}],
+	  [{h3, [], Line},
+	   {ul, [], Items}]},
+	 {br}, {hr}],
+	  
+    [X | gen_news(Fd, io:get_line(Fd,''))].
+
+gen_items(Fd, [10]) ->
+    [];
+gen_items(Fd,eof) ->
+    [];
+gen_items(Fd,Line) ->
+    [{li, [], {p, [], Line}} |gen_items(Fd, io:get_line(Fd, ''))].
+
+
+
+</erl>
+
+
+
