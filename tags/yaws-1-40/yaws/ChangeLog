@@ -1,0 +1,2937 @@
+2003-12-18 17:23  klacke
+
+	* include/yaws.hrl, src/yaws_config.erl, src/yaws_revproxy.erl,
+	src/yaws_server.erl: revproxy fixes
+
+2003-12-17 23:26  klacke
+
+	* src/yaws_api.erl, src/yaws_server.erl, www/arg.yaws,
+	www/man.yaws, www/news, www/readcookie.yaws, www/readpcookie.yaws:
+	""
+
+2003-12-17 15:21  klacke
+
+	* www/shopingcart/: shopcart.erl, shopcart.erl: ""
+
+2003-12-17 15:18  klacke
+
+	* include/yaws_api.hrl, man/yaws_api.5, src/yaws_api.erl,
+	src/yaws_compile.erl, www/index.yaws, www/man.yaws, www/post.yaws,
+	www/query.yaws, www/redirect.yaws, www/ssi.yaws: postvar(),
+	queryvar(), ssi docs
+
+2003-12-17 01:19  klacke
+
+	* vsn.mk, include/yaws_api.hrl, www/configuration.yaws,
+	www/dynamic.yaws, www/index.yaws, www/man.yaws, www/query.yaws,
+	www/ssi.yaws, www/ssi/dynamic.1, www/ssi/dynamic.2,
+	www/ssi/dynamic.3: ssi include with var expansion + docs
+
+2003-12-16 20:23  klacke
+
+	* src/yaws_api.erl, src/yaws_server.erl, www/EXHEAD, www/ssi.yaws,
+	www/ssi_ex1: ""
+
+2003-12-16 10:23  jbevemyr
+
+	* src/yaws_server.erl: Fixed redirect local to handle {net_path, _}
+
+2003-12-16 00:44  klacke
+
+	* include/yaws.hrl, include/yaws_api.hrl, src/Makefile,
+	src/yaws.erl, src/yaws_api.erl, src/yaws_config.erl,
+	src/yaws_revproxy.erl, src/yaws_server.erl, src/yaws_ssl.erl,
+	src/yaws_ticker.erl, www/TOPTAB, www/arg.yaws, www/embed.yaws,
+	www/post.yaws, www/readcookie.yaws, www/readpcookie.yaws,
+	www/session.yaws, www/session1.yaws, www/setcookie.yaws,
+	www/setpcookie.yaws, www/upload0.yaws: first almost working vsn of
+	revproxy
+
+2003-12-09 17:45  jbevemyr
+
+	* applications/mail/src/mail.erl: Fixed session starvation problem.
+
+2003-12-05 16:09  jbevemyr
+
+	* include/yaws_api.hrl, src/yaws_api.erl, src/yaws_html.erl: Added
+	set cookie parser
+
+2003-12-03 14:51  klacke
+
+	* src/yaws_compile.erl: -yawsfile patcg from tobbe
+
+2003-12-03 10:01  jbevemyr
+
+	* src/yaws_html.erl: [no log message]
+
+2003-11-28 12:06  jbevemyr
+
+	* src/yaws_api.erl: Fixed byg in ehtml_attr_expander.
+
+2003-11-27 12:49  jbevemyr
+
+	* src/: Makefile, yaws_html.erl: Added html->ehtml parser.
+
+2003-11-27 12:43  jbevemyr
+
+	* applications/mail/src/mail.erl: Fixed problem with quoted
+	addresses
+
+2003-11-25 01:08  klacke
+
+	* src/yaws_server.erl: changed behaviour when yaws cannor bind() to
+	addr, to just log and not fail startup completely
+
+2003-11-25 00:50  klacke
+
+	* www/: EXHEAD, embed.yaws, ybed.erl: ""
+
+2003-11-24 15:06  klacke
+
+	* src/: yaws.erl, yaws_api.erl: timezone fix, crashed on odd
+	timezones
+
+2003-11-24 14:47  klacke
+
+	* src/yaws_api.erl: mime type patch by Rob Schmersel
+
+2003-11-20 22:24  jbevemyr
+
+	* applications/mail/src/mail.erl: Various webmail fixes.
+
+2003-11-14 12:08  jbevemyr
+
+	* include/yaws.hrl: Security fix: turned off tilde expand and
+	directory listing by default.
+
+2003-11-11 19:49  jbevemyr
+
+	* applications/mail/TODO: [no log message]
+
+2003-11-11 19:41  jbevemyr
+
+	* src/yaws_api.erl: Fixed problem with checking for quotes in
+	attribute values. You can now use {check,Key,Value} to make ehtml
+	choose the proper qote for the Value part. Without the check
+	keyword the default quote will be used.
+
+2003-11-11 19:39  jbevemyr
+
+	* applications/mail/src/mail.erl: Fixed problem with locked mail
+	boxes.
+
+2003-11-10 23:39  klacke
+
+	* vsn.mk: [no log message]
+
+2003-11-10 23:28  klacke
+
+	* Makefile, applications/mail/README,
+	applications/mail/src/Makefile, applications/mail/src/defs.hrl,
+	applications/mail/src/mail.erl,
+	applications/mail/src/yaws-webmail.conf, src/yaws.erl,
+	src/yaws_api.erl, src/yaws_config.erl, www/contribs.yaws: added
+	proper config file support to the webmail
+
+2003-11-10 22:09  klacke
+
+	* ChangeLog, applications/webmail/HEAD,
+	applications/webmail/Makefile, applications/webmail/TOP,
+	applications/webmail/att.yaws, applications/webmail/blurulr3.gif,
+	applications/webmail/blurulr4.gif,
+	applications/webmail/compose.yaws, applications/webmail/index.yaws,
+	applications/webmail/logout.yaws, applications/webmail/mail.gif,
+	applications/webmail/mstil.css,
+	applications/webmail/pop3lib_cli.erl,
+	applications/webmail/read_mail.yaws,
+	applications/webmail/rmail.yaws,
+	applications/webmail/smtp_client.erl,
+	applications/webmail/test.erl, applications/webmail/webmail.erl,
+	applications/webmail/webmail.hrl,
+	applications/webmail/webmail_login.yaws,
+	applications/webmail/webmail_login_post.yaws,
+	applications/webmail/ylwmail.gif: [no log message]
+
+2003-11-10 00:08  jbevemyr
+
+	* applications/mail/src/mail.erl: Mail address handling cleaned up.
+
+2003-11-09 23:01  jbevemyr
+
+	* src/yaws_api.erl: Fixed bug in url_encode and modified ehtml to
+	use alternate quote for string attributes if the quote character
+	occurs in the string.
+
+2003-11-09 22:01  jbevemyr
+
+	* scripts/redhat/yaws.init.d: Redhat init script bug.
+
+2003-11-05 23:44  jbevemyr
+
+	* applications/mail/src/mail.erl: WebMail improvements - line
+	wrapping and best content type selection for multipart/alternative
+
+2003-11-04 23:09  jbevemyr
+
+	* applications/mail/src/mail.erl: Added support for displaying
+	forwarded messages.
+
+2003-11-04 23:08  jbevemyr
+
+	* src/yaws_api.erl: Extended parse_multi to cover one more special
+	case for MIME parsing.
+
+2003-11-04 14:44  cschultz
+
+	* src/yaws.erl: Removed dead code.
+
+2003-11-04 11:28  mikl
+
+	* applications/wiki/src/: wiki.erl, wiki_templates.erl: The action
+	bar can now be configured in the wiki_templates modules.
+
+2003-11-04 01:16  jbevemyr
+
+	* src/yaws_api.erl: Exposed parse_multipart, now used by mail app
+	as well.
+
+2003-11-04 01:15  jbevemyr
+
+	* applications/mail/src/mail.erl: Added basic multipart support.
+
+2003-11-01 16:04  mikl
+
+	* applications/wiki/: Makefile, start.sh, wiki.conf: Added a
+	process to release an independant tarball of the Wiki. This will
+	allow optional standalone distribution, while depending on a local
+	install of Yaws.
+
+2003-10-30 15:26  jbevemyr
+
+	* applications/mail/: mail/reply.yaws, src/mail.erl: Added message
+	delete in webmail
+
+2003-10-30 00:22  jbevemyr
+
+	* applications/mail/: Makefile, README, include.mk, vsn.mk,
+	mail/compose.yaws, mail/headers.yaws, mail/index.yaws,
+	mail/listop.yaws, mail/login.yaws, mail/logout.yaws,
+	mail/mail.yaws, mail/reply.yaws, mail/send.yaws,
+	mail/showmail.yaws, mail/spacer.gif, mail/tool-delete.gif,
+	mail/tool-div.gif, mail/tool-newmail.gif, mail/tool-send.gif,
+	mail/view-mark.gif, src/Makefile, src/defs.hrl, src/mail.erl,
+	src/mail_vsn.template: Added a another WebMail example application
+	:-). Includes a cookie based session server, among other things.
+
+2003-10-27 21:04  jbevemyr
+
+	* src/yaws_server.erl: Added support for {redirect_local,
+	{rel_path, Path}}
+
+2003-10-26 22:04  mikl
+
+	* applications/wiki/src/wiki_to_html.erl: Fixed an ugly bug I
+	previously introduced (Due to some thing in the code that need
+	refactoring.
+
+2003-10-26 21:30  mikl
+
+	* applications/wiki/src/: wiki_plugin_menu.erl, wiki_to_html.erl:
+	Menu plugin is now working; Links in menu are presented without the
+	"category" prefix.
+
+2003-10-22 23:56  mikl
+
+	* applications/wiki/src/: Makefile, utils.erl, wiki.erl,
+	wiki_format_txt.erl, wiki_utils.erl: The plugin menu is now
+	working. You can add list of page based on their Prefix.
+
+2003-10-22 22:42  mikl
+
+	* applications/wiki/src/: Makefile, utils.erl, wiki.erl,
+	wiki_utils.erl: Added last date-time of modification of a page.
+
+2003-10-20 18:22  mikl
+
+	* applications/wiki/: src/Makefile, src/wiki_format_txt.erl,
+	src/wiki_plugin_backlinks.erl, src/wiki_plugin_dummy.erl,
+	src/wiki_utils.erl, wiki/FormattingWikiPages.wob: Started coding
+	the plugin architecture: dummy and backlinks are provided as
+	example
+
+2003-10-20 10:58  mikl
+
+	* applications/wiki/: src/wiki_format_txt.erl,
+	wiki/WikiPreferences.wob, wiki/WikiPreferences.files/ftp.png,
+	wiki/WikiPreferences.files/http.png,
+	wiki/WikiPreferences.files/https.png,
+	wiki/WikiPreferences.files/interwiki.png,
+	wiki/WikiPreferences.files/mailto.png,
+	wiki/WikiPreferences.files/url.png: Added Wiki icons for external
+	http links and mailto links
+
+2003-10-04 20:46  klacke
+
+	* www/index.yaws: ""
+
+2003-10-04 20:36  klacke
+
+	* configure, www/contribs.yaws: ""
+
+2003-09-24 16:13  klacke
+
+	* c_src/setuid_drv.c: ""
+
+2003-09-21 00:42  jbevemyr
+
+	* src/yaws_server.erl: Attempted to fix redirect problem when a
+	host header isn't present, or when rhost or rport is present. We
+	first look for an rhost setting and if that is missing we look for
+	a host header, if that is also missing we use the servername and
+	rport or port.
+
+2003-09-21 00:18  jbevemyr
+
+	* src/yaws_server.erl: Reverted previous redirect_local fix.
+
+2003-09-16 06:44  lpsmith
+
+	* src/yaws_server.erl: We now return 403 on relative paths and
+	other malformed requests.
+	
+	Also some small code clean ups.  I really wish I had a visual
+	browser for dataflow analysis... it would make simplifing the code
+	much easier, as well as give one a quick rundown of code you aren't
+	familiar with.
+
+2003-09-15 03:38  lpsmith
+
+	* doc/yaws.tex: Updated documentation relating to WWW-Authenticate.
+
+2003-09-15 03:12  lpsmith
+
+	* include/yaws.hrl, src/yaws_server.erl: Removed unused fields "q"
+	and "wwwauth" in the #urltype{} record.
+	
+	Removed unused function yaws_server:unflat().
+
+2003-09-09 21:07  jbevemyr
+
+	* src/yaws_server.erl: Fixed problem with serving cached files.
+
+2003-09-09 02:53  lpsmith
+
+	* src/yaws_config.erl: [no log message]
+
+2003-09-09 00:49  klacke
+
+	* c_src/Makefile: [no log message]
+
+2003-09-09 00:43  klacke
+
+	* configure, configure.in, include.mk.in, vsn.mk, c_src/Makefile,
+	scripts/Install, scripts/Makefile, scripts/mangle, scripts/yaws.ss,
+	src/yaws.erl, src/yaws_compile.erl, src/yaws_config.erl,
+	src/yaws_ctl.erl, src/yaws_log.erl, src/yaws_server.erl: first
+	attempt to run properly under cygwin
+
+2003-09-08 23:02  lpsmith
+
+	* src/yaws_config.erl: 
+	Removed the code that checks that a directory exists in the case
+	of:
+	
+	<auth>	dir= ...  </auth>
+	
+	as www-authentication is now specified by server path and not
+	filesystem path.
+
+2003-09-08 22:37  lpsmith
+
+	* src/yaws_server.erl: 
+	WWW-Authentication directories are now specified by server path and
+	not filesystem path.  Code cleanup for www-authentication.  Major
+	authentication enhancements to come.
+	
+	Numerous other code cleanups, focusing on reducing the number of
+	arguments passed to various functions.	The biggest change is that
+	the query part of a URL isn't passed through all the URL-parsing
+	functions.   #urltype.q is now unused, should remove it at some
+	point in the future.
+	
+	We update the ARG record a lot less now.
+
+2003-09-04 13:15  cschultz
+
+	* src/yaws_server.erl: Fixed bug in deliver_dyn_part.
+
+2003-09-03 22:36  jbevemyr
+
+	* src/yaws_server.erl: Fixed problem when dynamic file only
+	returned {redirect, X} or {redirect_local, Y}.
+
+2003-08-28 22:42  klacke
+
+	* TODO: ""
+
+2003-08-25 23:09  klacke
+
+	* doc/yaws.pdf, man/yaws.1, scripts/yaws.ss: -sname and mnesia flag
+	added to start script
+
+2003-08-25 22:22  klacke
+
+	* ChangeLog: ""
+
+2003-08-25 22:21  klacke
+
+	* vsn.mk, doc/yaws.pdf, man/yaws.1, man/yaws.conf.5,
+	scripts/yaws.ss, src/yaws.erl, src/yaws_config.erl,
+	src/yaws_debug.erl, src/yaws_log.erl, src/yaws_server.erl,
+	www/index.yaws: added -x flag for tty trace and did the 1.3 release
+
+2003-08-25 20:06  klacke
+
+	* include.mk.in: removed the -b beam flag
+
+2003-08-25 12:06  cschultz
+
+	* doc/yaws.tex, man/yaws_api.5, src/yaws_api.erl: 
+	Make call_cgi available in yaws_api.
+
+2003-08-25 11:31  cschultz
+
+	* src/yaws_server.erl: [no log message]
+
+2003-08-25 11:29  cschultz
+
+	* include/yaws_api.hrl: 
+	comment to arg record field `pathinfo'
+
+2003-08-24 22:09  cschultz
+
+	* doc/Makefile: Call LaTeX twice.
+
+2003-08-24 22:08  cschultz
+
+	* doc/yaws.tex: arg record out value `page' configuration variable
+	`allowed_scripts' CGI chapter
+
+2003-08-24 17:56  cschultz
+
+	* man/yaws.1: -S, -load, -check
+
+2003-08-24 17:55  cschultz
+
+	* man/yaws_api.5: Changes to arg record, {page, {Options, Page}},
+	comment on returning a list of values.
+
+2003-08-24 17:53  cschultz
+
+	* man/yaws.conf.5: option allowed_scripts
+
+2003-08-23 22:52  cschultz
+
+	* src/yaws.erl: Minor optimization in split_sep.
+
+2003-08-23 17:07  cschultz
+
+	* src/yaws_cgi.erl: Correctly(?) combine several Cookie headers.
+
+2003-08-23 16:38  cschultz
+
+	* src/yaws_ssl.erl: Better header parsing (again), plus a small
+	optimization.
+
+2003-08-23 16:33  cschultz
+
+	* src/yaws.erl: Added function strip_spaces to go with is_space.
+
+2003-08-21 21:39  jbevemyr
+
+	* applications/wiki/scripts/Makefile: Fixed make install problem
+	for wiki
+
+2003-08-19 16:07  klacke
+
+	* scripts/: Install, darwin/README, darwin/Yaws.StartupItem,
+	darwin/Yaws.plist: Darwin /etc scripts support supplied by Eric
+	Baur
+
+2003-08-16 11:42  klacke
+
+	* config.guess, config.sub, configure, configure.in: darwin support
+	in configure scripts
+
+2003-08-16 11:41  klacke
+
+	* src/mime_type_c.erl: recursion bug
+
+2003-08-11 16:57  cschultz
+
+	* src/yaws_cgi.erl: 
+	
+	Now works with partial_post_size set.
+
+2003-08-11 16:54  cschultz
+
+	* src/yaws_server.erl: 
+	
+	Minor changes to get_client_data.
+
+2003-08-07 01:53  cschultz
+
+	* src/yaws_server.erl: 
+	
+	Fixed yet another ssl related bug.
+
+2003-08-06 20:03  cschultz
+
+	* src/yaws_cgi.erl: 
+	
+	Added variable HTTP_COOKIE.
+
+2003-08-05 22:27  cschultz
+
+	* src/yaws_ssl.erl: Report connection closure istead of `exit'ing.
+
+2003-08-03 18:54  cschultz
+
+	* src/yaws_server.erl: 
+	
+	Yaws files and appmods can return {page, {Options, Page}} instead
+	of {page, Page}.  Options is (an option or) a deep list of options.
+	 At the moment an option is {header, Header}.  I thought this might
+	be useful for Vary or Content-Location headers.
+
+2003-08-01 17:04  cschultz
+
+	* src/: yaws_ls.erl, yaws_server.erl: Mainly new HEAD request
+	handling.
+
+2003-08-01 17:01  cschultz
+
+	* src/yaws.erl: [no log message]
+
+2003-08-01 16:57  cschultz
+
+	* src/yaws_cgi.erl: Bug fix:  Don't assume headers.host is defined.
+
+2003-07-30 23:13  cschultz
+
+	* src/yaws.erl: 
+	Bug fix regarding my last ci: When sending partial content, set
+	status code to 206 accordingly.
+
+2003-07-30 22:55  cschultz
+
+	* src/yaws_server.erl: 
+	More faithful access logs in connection with {page, ...}.
+
+2003-07-30 22:11  cschultz
+
+	* include/yaws.hrl, src/yaws.erl, src/yaws_server.erl: 
+	For GETs on regular files:
+	
+	Added support for Content-Range, If-Range, If-Match, expanded
+	support for If-None-Match.
+
+2003-07-29 14:05  cschultz
+
+	* src/yaws_server.erl: [no log message]
+
+2003-07-26 00:14  cschultz
+
+	* src/: yaws_server.erl, yaws_ssl.erl: 
+	
+	Answer bad requests.
+
+2003-07-23 22:59  cschultz
+
+	* src/yaws_ssl.erl: 
+	Do not let SSL process die on unrecognized request.
+
+2003-07-23 22:58  cschultz
+
+	* src/yaws_server.erl: [no log message]
+
+2003-07-23 22:48  cschultz
+
+	* src/yaws_server.erl: 
+	For forbidden script types return 403, not 404.
+
+2003-07-22 11:49  cschultz
+
+	* include/yaws.hrl, src/yaws_config.erl, src/yaws_server.erl: 
+	
+	Made allowed script types (yaws, php, cgi) configurable.
+
+2003-07-21 18:24  cschultz
+
+	* src/yaws_cgi.erl: Return more headers
+
+2003-07-19 14:51  cschultz
+
+	* src/yaws_cgi.erl: Accept different capitalizations of
+	`Content-type'.
+
+2003-07-17 01:16  cschultz
+
+	* include/yaws.hrl, include/yaws_api.hrl, src/Makefile,
+	src/mime_type_c.erl, src/yaws_cgi.erl, src/yaws_server.erl: 
+	
+	Added CGI and PHP support.  Also for a request like	
+	/a/b/c.xxx/d/e with xxx being one of `yaws', `cgi' or `php' and
+	c.xxx being a plain file, /a/b/c.xxx is called with
+	Arg#arg.pathinfo, respectively the environment variable PATH_INFO,
+	set to `/d/e'.
+
+2003-07-17 01:09  cschultz
+
+	* src/yaws_ls.erl: 
+	Do not show full path.
+
+2003-07-17 01:06  cschultz
+
+	* scripts/yaws.ss, src/yaws_ctl.erl: 
+	Added command `-load' to yaws script.
+
+2003-07-17 01:04  cschultz
+
+	* src/: yaws.erl, yaws_ticker.erl: 
+	
+	Moved ticker function to separate module to ease purging of module
+	`yaws'.
+
+2003-07-16 17:16  cschultz
+
+	* src/yaws_server.erl: Some code clean-up.
+
+2003-07-15 03:33  cschultz
+
+	* src/yaws_ssl.erl: Made header parsing more robust with respect to
+	capitalizations.
+
+2003-07-15 00:14  cschultz
+
+	* src/yaws_server.erl: Fixed bug with SSL and post data
+
+2003-07-14 00:46  jbevemyr
+
+	* applications/wiki/src/wiki.erl: Improved speed of thumbs in
+	slideshow
+
+2003-07-13 01:31  cschultz
+
+	* include/yaws.hrl, src/yaws.erl, src/yaws_server.erl: 
+	Log file size for dynamic pages.
+
+2003-07-13 01:17  cschultz
+
+	* src/yaws_ssl.erl: Make sure the whole header is received.  Added
+	more header parsing.
+
+2003-07-13 01:12  cschultz
+
+	* src/yaws.erl: Changed etag function.
+
+2003-07-13 00:13  lpsmith
+
+	* include/yaws_api.hrl: Added the field server_path, which will
+	store the parsed and normalized path of the request string.  This
+	is in preparation for some significant clean-ups of the
+	yaws_server.erl code.
+
+2003-07-12 05:25  lpsmith
+
+	* src/yaws_api.erl: Improved path handling:  path_norm/1 removes
+	all occurences of double slashes and the directories "." and "..". 
+	url_decode_q_split now calls this function on the path that it
+	returns.
+	
+	This is to fix a variety of www-authenticate related security bugs.
+	 Previously,  it was possible to access any www-auth protected
+	directory by inserting a "/./" before the directory, i.e. by
+	requesting "/./confidential/file.html".
+
+2003-07-12 01:40  lpsmith
+
+	* src/yaws_404.erl: 
+	Fixed Cross-Site Scripting vunerability by html-quoting the path
+	displayed in the error message.
+
+2003-07-09 22:25  jbevemyr
+
+	* applications/wiki/src/: wiki.erl, wiki_format_txt.erl: Added auto
+	viewing of slides.
+
+2003-07-09 21:33  jbevemyr
+
+	* applications/wiki/src/wiki.erl: Minor slide show enhancement.
+
+2003-07-09 20:00  jbevemyr
+
+	* applications/wiki/scripts/updateWiki.src: [no log message]
+
+2003-07-09 19:57  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, wiki/getMidSize.yaws,
+	wiki/getThumb.yaws, wiki/thumbIndex.yaws: Added thumbnail index to
+	slideshow and scaling of images in slideshow using convert
+
+2003-07-03 03:03  jbevemyr
+
+	* src/yaws_log.erl: Log format fix
+
+2003-06-27 15:16  jbevemyr
+
+	* src/yaws_config.erl: Fixed server sorting bug
+
+2003-06-25 17:07  jbevemyr
+
+	* src/yaws_api.erl: Fixed set cookie problem with lynx
+
+2003-06-23 17:26  klacke
+
+	* src/yaws_server.erl: ""
+
+2003-06-23 16:07  klacke
+
+	* src/yaws_server.erl: return last value of the list returned from
+	out/1
+
+2003-06-23 12:19  klacke
+
+	* src/: yaws_config.erl, yaws_log.erl: missing integer_conversion
+	in ssl conf depth and verify
+
+2003-06-23 12:15  klacke
+
+	* src/yaws_log.erl: setuid code had broken
+
+2003-06-17 12:57  klacke
+
+	* src/: yaws.erl, yaws_server.erl: possibility to turn off
+	transfer-encoding: chunked and explicitly set content length
+
+2003-06-01 21:25  klacke
+
+	* www/index.yaws: ""
+
+2003-06-01 21:25  klacke
+
+	* ChangeLog: 1.22 checkin
+
+2003-06-01 20:35  klacke
+
+	* doc/yaws.pdf: ""
+
+2003-05-27 14:56  klacke
+
+	* src/yaws_api.erl: the ehtml expander code has to be updated again
+	in order to not interfer with rendering when it comes to genereated
+	newlines
+
+2003-05-26 23:58  klacke
+
+	* configure, configure.in, vsn.mk, scripts/Install,
+	scripts/Makefile, scripts/ntpath.sh, scripts/yaws.init.d,
+	scripts/yaws.ss, scripts/redhat/yaws.init.d,
+	scripts/suse/yaws.init.d, src/yaws_config.erl, src/yaws_server.erl:
+	cvs fixes + install scripts gentoo/suse/redhat
+
+2003-05-24 15:36  jbevemyr
+
+	* applications/wiki/scripts/updateWiki.src: Fixed install problem.
+
+2003-05-20 00:31  klacke
+
+	* src/yaws_api.erl: added newlines to strategic places in
+	ehtml_expand/1 and ehtml_exapnder/1. No newlines after img tags.
+
+2003-05-19 23:55  jbevemyr
+
+	* applications/wiki/wiki/FormattingWikiPages.wob: [no log message]
+
+2003-05-19 23:42  jbevemyr
+
+	* applications/wiki/src/wiki_format_txt.erl: Added expires region.
+
+2003-05-17 23:58  jbevemyr
+
+	* applications/wiki/src/wiki.erl: Added number table for slideshow
+	in Wiki
+
+2003-05-17 23:25  jbevemyr
+
+	* src/yaws_config.erl, src/yaws_server.erl, include/yaws.hrl,
+	man/yaws.conf.5: Added rhost option for setting explicit redirect
+	host (and port if needed)
+
+2003-05-17 21:52  jbevemyr
+
+	* applications/wiki/wiki/FormattingWikiPages.wob: [no log message]
+
+2003-05-17 21:43  jbevemyr
+
+	* applications/wiki/: Makefile, README, src/wiki_format_txt.erl,
+	wiki/FormattingWikiPages.wob: Added underline macro
+
+2003-05-17 21:42  jbevemyr
+
+	* applications/wiki/scripts/updateWiki.src: [no log message]
+
+2003-05-17 21:39  jbevemyr
+
+	* applications/wiki/scripts/: Makefile, updateWiki.sh,
+	updateWiki.src: Minor wiki script fixes
+
+2003-05-17 13:52  jbevemyr
+
+	* applications/wiki/: README, updateWiki.sh, scripts/Makefile,
+	scripts/getPassword.src, scripts/importFiles.src,
+	scripts/updateWiki.sh, src/wiki.erl: Added some useful scripts
+
+2003-05-16 22:09  jbevemyr
+
+	* applications/wiki/: updateWiki.sh, updateWiki.sh: [no log
+	message]
+
+2003-05-16 22:05  jbevemyr
+
+	* applications/wiki/updateWiki.sh: [no log message]
+
+2003-05-16 21:48  jbevemyr
+
+	* applications/wiki/updateWiki.sh: Added wiki update script
+
+2003-05-16 13:45  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_templates.erl,
+	src/wiki_utils.erl, wiki/WikiPreferences.files/custom.css: Menu is
+	now red when a page is locked.
+
+2003-05-16 13:12  jbevemyr
+
+	* applications/wiki/src/: wiki.erl, wiki_format_txt.erl: Added
+	header tags =H3= ==H2== ===H1===
+
+2003-05-14 13:25  klacke
+
+	* src/yaws_server.erl: more redir   fixes
+
+2003-05-13 22:35  jbevemyr
+
+	* src/yaws_server.erl: Fixed yaws redirect bug
+
+2003-05-13 13:35  klacke
+
+	* src/: yaws.erl, yaws_debug.hrl, yaws_server.erl: when a gserv()
+	dies, exit app + 302 without content shall have a conten length
+	header, newest mozilla hangs (correctly) on 302's from yaws
+
+2003-05-12 09:56  jbevemyr
+
+	* applications/wiki/README: [no log message]
+
+2003-05-12 09:53  jbevemyr
+
+	* applications/wiki/src/wiki.erl: [no log message]
+
+2003-05-12 09:49  klacke
+
+	* src/yaws_api.erl: newlines added by jocke in bluetail cvs
+
+2003-05-08 23:53  jbevemyr
+
+	* applications/wiki/src/: wiki.erl, wiki_format_txt.erl: [no log
+	message]
+
+2003-05-08 23:12  jbevemyr
+
+	* applications/wiki/src/wiki_format_txt.erl: minor bugfixes
+
+2003-05-07 10:13  klacke
+
+	* scripts/suse/yaws.init.d: ""
+
+2003-05-07 10:09  klacke
+
+	* scripts/yaws.ss: ""
+
+2003-05-05 01:22  klacke
+
+	* scripts/gentoo/yaws.ebuild: ""
+
+2003-05-04 23:47  klacke
+
+	* include.mk.in, scripts/Install, scripts/Makefile,
+	scripts/yaws.init.d, scripts/gentoo/conf.d.yaws,
+	scripts/gentoo/yaws.ebuild: ""
+
+2003-05-04 23:13  klacke
+
+	* scripts/: Install, gentoo/conf.d.yaws: ""
+
+2003-05-04 21:31  klacke
+
+	* scripts/Install: ""
+
+2003-05-04 21:24  klacke
+
+	* scripts/Install: ""
+
+2003-05-04 20:47  klacke
+
+	* doc/Makefile: ""
+
+2003-05-04 20:34  klacke
+
+	* scripts/mangle, www/index.yaws: ""
+
+2003-05-04 18:55  klacke
+
+	* scripts/Install: ""
+
+2003-05-04 18:41  klacke
+
+	* scripts/: Install, gentoo/yaws.ebuild: ""
+
+2003-05-04 18:21  klacke
+
+	* Makefile, vsn.mk, doc/Makefile, doc/yaws.pdf, man/Makefile,
+	scripts/Install, scripts/gentoo/conf.d.yaws,
+	scripts/gentoo/init.d.yaws, scripts/gentoo/yaws.ebuild: ""
+
+2003-05-03 21:04  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_format_txt.erl,
+	src/wiki_to_html.erl, wiki/FormattingWikiPages.wob: Added slideshow
+	support. With a slideshow:MySlideShow link on a page you will get a
+	slide show of all the files stored in that page (image files
+	preferably :-)
+
+2003-05-02 23:25  klacke
+
+	* doc/: Makefile, yaws.tex: nicer latex docs in patch from
+	nniclausse on sourceforge
+
+2003-05-02 22:49  klacke
+
+	* www/man.yaws: ""
+
+2003-05-02 22:39  klacke
+
+	* vsn.mk: ""
+
+2003-05-02 22:37  klacke
+
+	* www/index.yaws: 1.2 checkin
+
+2003-05-02 21:34  klacke
+
+	* src/yaws_ls.erl: small bugs with listdir, no 0 on chunked
+	encodings, and no url_encode on iso chars in filenames
+
+2003-04-28 23:48  etnt
+
+	* scripts/Install: Added the setting of etcdir
+
+2003-04-25 10:02  etnt
+
+	* src/yaws_config.erl: Set the debug entry in #gconf{}, in
+	make_default_gconf/1.
+
+2003-04-22 15:06  klacke
+
+	* vsn.mk: ""
+
+2003-04-10 12:46  klacke
+
+	* src/yaws_compile.erl: [no log message]
+
+2003-04-10 12:20  mikl
+
+	* src/yaws_config.erl: Cosmetic change for logs: Missing ~n.
+
+2003-04-10 10:59  mikl
+
+	* ChangeLog, Makefile, README, include.mk.in, doc/Makefile,
+	scripts/Install, scripts/Makefile, src/Makefile,
+	www/shopingcart/Makefile: Build chain modifications: Install target
+	directories is now totally controllable; The docs build is
+	optionnal
+
+2003-04-09 13:12  klacke
+
+	* src/Makefile: [no log message]
+
+2003-04-09 13:04  klacke
+
+	* src/yaws_compile.erl: use lock on comiler, erlc is not reentrant
+
+2003-03-25 11:14  klacke
+
+	* src/yaws_server.erl:	Bug with cached yaws files with a query
+	part
+
+2003-03-11 06:49  brucefitzsimons
+
+	* src/yaws_log.erl: Fixed the TZ determination code, its not
+	perfect or fast yet.
+
+2003-03-10 10:25  brucefitzsimons
+
+	* src/: yaws_log.erl, yaws_server.erl: Added referrer "referer" and
+	user-agent to complete the "combined" log format. It will log - for
+	either field if it is not supplied. The old logging command has
+	been retained for backward compatibility.
+	
+	Also added code to log the time in localtime, and log the offset in
+	the apache/Common Log Format. This is significant for anyone using
+	the logs...
+
+2003-03-06 21:47  jbevemyr
+
+	* src/yaws_api.erl: Removed 'Version' from set-cookie.
+
+2003-03-06 19:36  klacke
+
+	* ChangeLog, www/index.yaws: 1.01 checkin
+
+2003-03-06 12:22  klacke
+
+	* Makefile, src/yaws_compile.erl, src/yaws_server.erl: skip empty
+	space after an </erl> and handle http_error which is generated by
+	the inet_drv.c code. This assumes a patch to the inet_drv.c that
+	actually generates a http_error in this case. Default erl hangs
+	there
+
+2003-03-05 12:46  klacke
+
+	* src/: yaws.erl, yaws_server.erl: handle 0.9 clients
+
+2003-03-05 12:19  klacke
+
+	* include.mk, src/yaws_server.erl, include.mk: ""
+
+2003-03-04 23:38  klacke
+
+	* src/yaws_server.erl: [no log message]
+
+2003-03-03 22:37  jbevemyr
+
+	* src/: yaws.erl, yaws_server.erl: Added proper support for
+	'if-none-match' with etag matching
+
+2003-03-03 17:35  klacke
+
+	* src/yaws_server.erl: ""
+
+2003-02-25 16:12  klacke
+
+	* src/yaws_api.erl, src/yaws_compile.erl, src/yaws_server.erl,
+	www/man.yaws: Fixed probles with paths that had a query part ending
+	up in the cache
+
+2003-02-25 14:31  klacke
+
+	* vsn.mk: ""
+
+2003-02-25 14:30  klacke
+
+	* c_src/setuid_drv.c, src/yaws.erl, src/yaws_config.erl,
+	src/yaws_ctl.erl, src/yaws_log.erl, src/yaws_server.erl: did away
+	with the idiotic calls to id -u as well as the the broken grep in
+	/etc/passwd. Also ensured that .yaws files with a query part don't
+	end up in the cache. They need to be reparsed every time
+
+2003-02-17 20:33  klacke
+
+	* src/yaws_server.erl: added http version to access log messages
+
+2003-02-08 14:17  klacke
+
+	* include/yaws.hrl, man/yaws.conf.5, src/yaws_config.erl,
+	src/yaws_debug.erl, src/yaws_server.erl: added the option of
+	disabling dir_listings
+
+2003-02-08 14:04  klacke
+
+	* src/yaws_server.erl: bug with redir for missing trailing slash
+	together with a query part of the url fixed, found by Erik Pearson
+	<erikp@attbi.com>
+
+2003-02-08 13:53  klacke
+
+	* src/yaws_server.erl: bug in arg rewrite handling found and fixed
+	by Taavi Talvik
+
+2003-02-08 13:27  klacke
+
+	* src/yaws_config.erl: bug in ssl config passord parse found by
+	Eric Pearson
+
+2003-01-28 19:27  klacke
+
+	* src/yaws_server.erl: [no log message]
+
+2003-01-27 23:22  klacke
+
+	* src/yaws_server.erl: ""
+
+2003-01-27 23:04  klacke
+
+	* src/yaws_compile.erl, ChangeLog: ""
+
+2003-01-24 00:59  klacke
+
+	* src/: yaws_compile.erl, yaws_compile.erl: [no log message]
+
+2003-01-23 23:52  klacke
+
+	* www/index.yaws: [no log message]
+
+2003-01-23 23:43  klacke
+
+	* vsn.mk: we'ready for production now
+
+2003-01-23 23:38  klacke
+
+	* src/: yaws_compile.erl, yaws_config.erl, yaws_server.erl: don't
+	log a crash when we get methods we don't support and also a fix in
+	the yaws compiler so that we can compile files that have been
+	originally produced on a win32 machine, the problem was \r\n lines
+
+2003-01-21 14:34  jbevemyr
+
+	* src/yaws.erl: Made it possible to have multiple set-cookie
+	headers
+
+2003-01-17 15:27  klacke
+
+	* applications/webmail/test.erl: ""
+
+2003-01-15 17:07  klacke
+
+	* src/: yaws_api.erl, yaws_server.erl: ""
+
+2003-01-10 13:14  klacke
+
+	* src/yaws_server.erl: large files became LISTS
+
+2003-01-08 10:29  klacke
+
+	* www/man.yaws: security bug found by jcortner@cvol.net
+
+2003-01-08 10:21  klacke
+
+	* src/yaws_server.erl: ""
+
+2003-01-05 19:15  klacke
+
+	* www/man.yaws: ""
+
+2002-12-27 00:30  jbevemyr
+
+	* applications/wiki/src/wiki.erl: [no log message]
+
+2002-12-10 11:57  mikl
+
+	* www/shopingcart/Makefile: In the shopping cart Makefile, one of
+	the generated beam file was not removed with the make clean
+	command.
+
+2002-12-10 10:30  mikl
+
+	* www/stats.yaws: Modified stats.yaws to add total number of hits
+	at the end of each virtual host statistic table.
+
+2002-12-09 23:16  mikl
+
+	* src/yaws_config.erl: mremond: Made a very small change in
+	yaws_config.erl.  You can now use relative directory name in a yaws
+	configuration file.
+
+2002-12-09 23:15  mikl
+
+	* src/yaws_config.erl: yaws_config.erl
+
+2002-12-06 00:34  klacke
+
+	* src/: yaws_log.erl, yaws_server.erl: ""
+
+2002-12-05 23:29  klacke
+
+	* src/mime.types: ""
+
+2002-12-05 12:27  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-12-03 19:37  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-12-03 19:34  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-12-03 13:19  klacke
+
+	* src/: yaws_api.erl, yaws_config.erl, yaws_debug.erl,
+	yaws_log.erl, yaws_server.erl: ""
+
+2002-12-03 12:25  klacke
+
+	* src/yaws.erl: erase headers
+
+2002-12-01 20:36  klacke
+
+	* www/upload.yaws: ""
+
+2002-12-01 20:24  klacke
+
+	* ChangeLog, TODO, vsn.mk, doc/yaws.tex, man/yaws.conf.5,
+	www/TOPTAB, www/contribs.yaws, www/index.yaws: ""
+
+2002-12-01 13:24  klacke
+
+	* src/yaws_log.erl: bugs in wrap log
+
+2002-11-29 19:30  klacke
+
+	* src/yaws_log.erl, src/yaws_ls.erl, src/yaws_server.erl,
+	www/configuration.yaws, www/index.yaws: Even more fixes on the
+	change user thingie, fixed a bug with dir listings together with
+	~expansion Cleanup code removed old dead code catch around broken
+	requests from nimda et at.el which produced crashes in our report
+	log + bugdix on 403 replies
+
+2002-11-29 14:33  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-29 14:08  klacke
+
+	* src/yaws_404.erl: ""
+
+2002-11-29 14:02  klacke
+
+	* src/yaws_log.erl: ""
+
+2002-11-29 14:01  klacke
+
+	* include.mk: run as nobody may work now
+
+2002-11-29 13:50  klacke
+
+	* src/: yaws_log.erl, yaws_server.erl: ""
+
+2002-11-28 22:14  klacke
+
+	* scripts/yaws.ss: ""
+
+2002-11-28 20:32  klacke
+
+	* README, configure, configure.in: ""
+
+2002-11-28 00:24  klacke
+
+	* Makefile, config.guess, config.sub, include.mk, include.mk.in,
+	install-sh, c_src/Makefile, c_src/setuid_drv.c, include/yaws.hrl,
+	man/yaws.conf.5, src/yaws.erl, src/yaws_config.erl,
+	src/yaws_ctl.erl, src/yaws_log.erl, src/yaws_server.erl,
+	src/yaws_sup.erl: added ability to run as different user than root
+
+2002-11-27 11:13  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-11-26 19:50  klacke
+
+	* src/: yaws_ls.erl, yaws_server.erl: ""
+
+2002-11-26 19:21  klacke
+
+	* www/stil.css: ""
+
+2002-11-26 19:05  klacke
+
+	* www/: EXHEAD, code.yaws, index.yaws, pcookie.yaws, session.yaws,
+	session1.yaws: ""
+
+2002-11-26 17:11  klacke
+
+	* src/yaws.erl, src/yaws_api.erl, src/yaws_ctl.erl, www/arg.yaws,
+	www/code.yaws, www/index.yaws, www/upload0.yaws: ""
+
+2002-11-25 23:52  klacke
+
+	* examples/ebin/.empty, examples/include/.empty,
+	scripts/make-release, scripts/make-release, scripts/make-release:
+	""
+
+2002-11-25 23:35  klacke
+
+	* doc/Makefile: ""
+
+2002-11-25 23:34  klacke
+
+	* CHANGELOG, ChangeLog, vsn.mk, www/index.yaws, www/static.html:
+	vsn 0.59 ci
+
+2002-11-25 23:00  klacke
+
+	* www/TOPTAB: ""
+
+2002-11-25 22:57  klacke
+
+	* man/yaws_api.5, www/EXHEAD, www/arg.yaws, www/doc.yaws,
+	www/upload.yaws, www/upload0.yaws, www/shopingcart/Makefile,
+	www/shopingcart/source.html: ""
+
+2002-11-25 22:45  klacke
+
+	* src/yaws_ctl.erl: ""
+
+2002-11-25 21:47  jbevemyr
+
+	* src/yaws_api.erl: [no log message]
+
+2002-11-25 20:59  lukeg
+
+	* src/yaws_api.erl: Moved ehtml_expand in here.
+	
+	Added ehtml_expander/1 for fast reusable EHTML templates.
+
+2002-11-25 20:58  lukeg
+
+	* src/yaws_server.erl: Moved ehtml_expand into yaws_api
+
+2002-11-22 17:13  klacke
+
+	* src/: yaws.erl, yaws_api.erl: ""
+
+2002-11-22 16:07  klacke
+
+	* include/yaws.hrl, src/yaws.erl, src/yaws_api.erl,
+	src/yaws_ctl.erl, src/yaws_ls.erl, src/yaws_server.erl: ""
+
+2002-11-22 15:00  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-22 00:12  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-21 23:31  klacke
+
+	* vsn.mk, include/yaws.hrl, src/yaws.erl, src/yaws_404.erl,
+	src/yaws_api.erl, src/yaws_debug.erl, src/yaws_server.erl: outh
+	record, the outgoing headers are built up into a record now, much
+	cleaner
+
+2002-11-21 22:36  lukeg
+
+	* src/: yaws_api.erl, yaws_server.erl: Added a blocking / flow
+	control option for streaming content. The interface is
+	yaws_api:stream_chunk_deliver_blocking/2
+
+2002-11-20 21:18  klacke
+
+	* scripts/yaws.ss, src/yaws_ctl.erl: ""
+
+2002-11-20 17:19  klacke
+
+	* scripts/yaws.ss, src/yaws_compile.erl, src/yaws_ctl.erl: -check
+	arg
+
+2002-11-20 14:53  klacke
+
+	* include/yaws_api.hrl, man/yaws_api.5, src/yaws.erl,
+	src/yaws_api.erl: parse_url
+
+2002-11-20 13:21  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-11-20 10:59  jbevemyr
+
+	* include/yaws.hrl, src/yaws_config.erl, src/yaws_server.erl: [no
+	log message]
+
+2002-11-20 10:37  jbevemyr
+
+	* src/: yaws_server.erl, yaws.erl: [no log message]
+
+2002-11-20 10:17  jbevemyr
+
+	* include/yaws.hrl, src/yaws_config.erl, src/yaws_server.erl: added
+	servername to config file
+
+2002-11-19 23:14  etnt
+
+	* src/yaws_server.erl: removed reverse of appmod_prepath
+
+2002-11-19 22:52  jbevemyr
+
+	* src/yaws_config.erl: Added support for quoted strings in
+	yaws.conf
+
+2002-11-19 20:15  jbevemyr
+
+	* include/yaws.hrl, src/yaws_server.erl: Fixed redirect_local
+
+2002-11-19 00:12  etnt
+
+	* include/yaws_api.hrl, src/yaws_server.erl: Added
+	#args.appmod_prepath which contains the path in front of
+	<appmod><appmoddata>
+
+2002-11-18 23:13  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-18 23:00  jbevemyr
+
+	* src/yaws_api.erl: Implemented setcookie/6
+
+2002-11-18 22:52  jbevemyr
+
+	* src/yaws_api.erl: [no log message]
+
+2002-11-18 22:45  klacke
+
+	* src/mime_type_c.erl: ""
+
+2002-11-18 20:28  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-18 17:22  klacke
+
+	* src/: yaws_debug.erl, yaws_server.erl: ""
+
+2002-11-18 08:53  klacke
+
+	* src/yaws_compile.erl, src/yaws_ls.erl, www/TOPTAB, www/man.yaws,
+	www/simple.yaws: ""
+
+2002-11-16 18:10  klacke
+
+	* src/: yaws_api.erl, yaws_compile.erl, yaws_compile.erl: ""
+
+2002-11-15 15:07  lukeg
+
+	* src/yaws_api.erl: Bugfixed url_encode/1 (really this time!)
+
+2002-11-15 14:52  klacke
+
+	* src/: yaws_api.erl, yaws_server.erl: ""
+
+2002-11-15 14:32  lukeg
+
+	* src/yaws_api.erl: Bugfixed url_encode/1
+
+2002-11-13 16:30  lukeg
+
+	* src/yaws_server.erl: Bigfix in ehtml_attrs: now "quoting" the
+	value.
+
+2002-11-13 00:30  klacke
+
+	* src/: yaws.erl, yaws_api.erl, yaws_server.erl: ""
+
+2002-11-12 21:30  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-12 17:57  lukeg
+
+	* src/yaws_server.erl: Heavily optimized ehtml_expand by converting
+	io_lib:format's into conses.
+
+2002-11-12 17:49  klacke
+
+	* man/yaws_api.5, src/yaws_server.erl: page retval
+
+2002-11-12 17:35  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-12 12:36  klacke
+
+	* src/: yaws.erl, yaws_api.erl, yaws_server.erl: ""
+
+2002-11-11 10:47  klacke
+
+	* include/yaws.hrl, src/yaws_api.erl: ""
+
+2002-11-10 23:19  klacke
+
+	* include/yaws.hrl, man/yaws_api.5, src/yaws_api.erl,
+	src/yaws_config.erl, src/yaws_debug.erl, src/yaws_server.erl: ""
+
+2002-11-10 23:03  klacke
+
+	* doc/: a.eps, b.eps, layout.eps, yaws.tex, yaws_head.eps: user
+	manual ok
+
+2002-11-09 10:53  klacke
+
+	* doc/Makefile: ""
+
+2002-11-08 17:21  etnt
+
+	* man/yaws.conf.5: Added explanation for 'start_mod' and the opaque
+	context.
+
+2002-11-08 16:33  etnt
+
+	* include/yaws.hrl, src/yaws_config.erl, src/yaws_server.erl: More
+	opaque stuff.
+
+2002-11-08 14:40  jbevemyr
+
+	* src/yaws_server.erl: [no log message]
+
+2002-11-08 13:26  klacke
+
+	* src/: yaws_api.erl, yaws_log.erl, yaws_server.erl: added
+	interactive tty trace
+
+2002-11-08 01:24  klacke
+
+	* doc/yaws.tex: ""
+
+2002-11-07 02:11  etnt
+
+	* include/yaws.hrl, src/yaws_config.erl, src/yaws_server.erl: Added
+	a '<opaque>' context to be defined inside a server context. This
+	makes it possible for a user application to get hold of those 'Key
+	= Value' definitions made inside the opaque context. If 'module =
+	<Module>' is defined, a callback: Module:yaws_opaque/1 will be
+	called at startup of the server. The argument of the callback is a
+	list of {Key,Value} tuples as found in the opaque context.
+
+2002-11-07 01:12  klacke
+
+	* doc/yaws.tex, include/yaws_api.hrl, man/yaws_api.5,
+	src/yaws_api.erl, src/yaws_server.erl, www/arg.yaws: ""
+
+2002-11-06 22:02  klacke
+
+	* include/yaws.hrl, man/yaws.conf.5, src/yaws.erl,
+	src/yaws_config.erl, src/yaws_server.erl: added arg_rewrite_mod
+
+2002-11-06 14:59  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-06 14:23  klacke
+
+	* include/yaws.hrl, src/yaws_404.erl, src/yaws_config.erl,
+	src/yaws_server.erl: customized crash messages
+
+2002-11-05 21:51  klacke
+
+	* man/yaws_api.5, src/yaws_api.erl: ""
+
+2002-11-05 15:02  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-11-05 13:44  klacke
+
+	* src/yaws_config.erl: ""
+
+2002-11-05 01:27  klacke
+
+	* src/: yaws_404.erl, yaws_server.erl: ""
+
+2002-11-05 01:21  klacke
+
+	* Makefile, doc/Makefile, doc/yaws.tex, include/yaws.hrl: added doc
+	directory
+
+2002-11-05 01:16  klacke
+
+	* man/yaws.conf.5: ""
+
+2002-11-05 01:12  klacke
+
+	* src/yaws_config.erl: rewrote ssl conf
+
+2002-11-05 00:49  klacke
+
+	* src/: Makefile, yaws_404.erl, yaws_api.erl, yaws_config.erl,
+	yaws_server.erl: 404 module added
+
+2002-11-04 23:23  klacke
+
+	* Makefile, scripts/Makefile, www/configuration.yaws: make
+	local_install target
+
+2002-11-02 17:06  jbevemyr
+
+	* applications/wiki/src/: wiki.erl, wiki_format_txt.erl: Fixed
+	problem with edit
+
+2002-10-31 00:36  jbevemyr
+
+	* applications/wiki/src/: wiki.erl, wiki_format_txt.erl: Added
+	mailtoall: wiki tag which creates a mailing list containing all
+	email addresses found in mailto: tags on the page. A convenient way
+	of creating mailing lists.
+
+2002-10-30 21:54  jbevemyr
+
+	* applications/wiki/: README, src/wiki_templates.erl: Moved the
+	Wiki settings into a wiki page - WikiPrefereces, ie they are now
+	editable from within the Wiki.
+
+2002-10-30 21:50  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_templates.erl,
+	src/wiki_to_html.erl, src/wiki_utils.erl, wiki/WikiPreferences.wob,
+	wiki/allpages.gif, wiki/custom.css, wiki/edit.gif,
+	wiki/editfiles.gif, wiki/editme.gif, wiki/history.gif,
+	wiki/home.gif, wiki/icon.gif, wiki/info.gif, wiki/lastedited.gif,
+	wiki/locked.gif, wiki/normal.gif, wiki/old.gif, wiki/zombies.gif,
+	wiki/WikiPreferences.files/allpages.gif,
+	wiki/WikiPreferences.files/custom.css,
+	wiki/WikiPreferences.files/edit.gif,
+	wiki/WikiPreferences.files/editfiles.gif,
+	wiki/WikiPreferences.files/editme.gif,
+	wiki/WikiPreferences.files/history.gif,
+	wiki/WikiPreferences.files/home.gif,
+	wiki/WikiPreferences.files/icon.gif,
+	wiki/WikiPreferences.files/lastedited.gif,
+	wiki/WikiPreferences.files/zombies.gif: Moved the Wiki settings
+	into a wiki page - WikiPrefereces, ie they are now editable from
+	within the Wiki.
+
+2002-10-29 09:21  jbevemyr
+
+	* applications/wiki/src/wiki_format_txt.erl: Fixed problem with
+	multiple recipients in a mailto tag
+
+2002-10-28 10:30  jbevemyr
+
+	* src/yaws_server.erl: Fixed servername:rport so that it is only
+	used if no other server matches.
+
+2002-10-28 10:08  jbevemyr
+
+	* src/yaws_server.erl: The host header is matched agains the
+	servername and the servername:rport, to support servers behind
+	portmapping firewalls
+
+2002-10-27 21:48  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, wiki/changePassword.yaws,
+	wiki/changePassword2.yaws: Added change password function
+
+2002-10-26 22:10  jbevemyr
+
+	* applications/wiki/src/wiki.erl: [no log message]
+
+2002-10-26 17:57  klacke
+
+	* src/yaws_ctl.erl: ""
+
+2002-10-25 23:45  etnt
+
+	* applications/wiki/src/Makefile: Now also install correctly on
+	FreeBSD
+
+2002-10-25 12:13  jbevemyr
+
+	* applications/wiki/: README, src/wiki.erl, src/wiki_to_html.erl,
+	wiki/previewNewPage.yaws: Fixed problems with regions
+
+2002-10-23 14:20  etnt
+
+	* src/yaws_ls.erl: Fixed the indentation of directory listings. 
+	Also, when hoovering over a filename, the size in bytes is
+	displayed. Finally, a README file is inlined at the bottom, if it
+	exist.
+
+2002-10-23 12:11  klacke
+
+	* src/yaws_server.erl: empty sconfs in embedded mode
+
+2002-10-22 14:44  jbevemyr
+
+	* src/Makefile: Added make dependence rule for include files.
+
+2002-10-22 12:41  jbevemyr
+
+	* include/yaws.hrl, man/yaws.conf.5, src/yaws_config.erl,
+	src/yaws_server.erl: Fixed redirects and added rport and rmethod
+	server settings.
+
+2002-10-22 11:00  jbevemyr
+
+	* src/yaws_server.erl: Fixed redirect code.
+
+2002-10-22 00:03  klacke
+
+	* vsn.mk: ""
+
+2002-10-21 11:14  klacke
+
+	* www/contact.yaws: ""
+
+2002-10-18 11:50  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-10-18 11:40  klacke
+
+	* man/yaws_api.5: ""
+
+2002-10-18 10:20  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-10-18 09:41  klacke
+
+	* src/yaws_log.erl: ""
+
+2002-10-18 00:17  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_yaws.erl,
+	wiki/previewPage.yaws, wiki/storePage.yaws: Added session state to
+	wiki for better page editing
+
+2002-10-17 13:04  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-10-17 12:07  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-10-16 16:51  jbevemyr
+
+	* applications/wiki/src/: wiki.erl, wiki_to_html.erl: Added size
+	title to files
+
+2002-10-16 16:03  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_yaws.erl,
+	wiki/allPages.yaws, wiki/copyFiles.yaws, wiki/deleteFiles.yaws,
+	wiki/editPage.yaws, wiki/editTag.yaws, wiki/finalDeletePage.yaws,
+	wiki/lastEdited.yaws, wiki/previewNewPage.yaws,
+	wiki/previewPage.yaws, wiki/previewTagged.yaws,
+	wiki/putPassword.yaws, wiki/sendMeThePassword.yaws,
+	wiki/storeFiles.yaws, wiki/storeNewPage.yaws, wiki/storePage.yaws,
+	wiki/storeTagged.yaws, wiki/wikiZombies.yaws: Updated wiki with new
+	parse_post_data interfaces.
+
+2002-10-16 14:22  klacke
+
+	* include/yaws.hrl, src/yaws.erl, src/yaws_ctl.erl,
+	src/yaws_log.erl, src/yaws_ls.erl, src/yaws_server.erl,
+	src/yaws_session_server.erl: introduced opaque data in sconf
+
+2002-10-16 13:55  klacke
+
+	* include/yaws_api.hrl, src/yaws_api.erl, src/yaws_server.erl: made
+	backwards incompatible change to parse_post_data
+
+2002-10-15 23:48  klacke
+
+	* include/yaws.hrl, src/yaws_config.erl, src/yaws_debug.erl,
+	src/yaws_server.erl: ""
+
+2002-10-15 16:16  klacke
+
+	* src/: yaws.erl, yaws_api.erl, yaws_log.erl: log bugs in embedded
+	mode
+
+2002-10-15 15:38  jbevemyr
+
+	* src/yaws_server.erl: Fixed problem when log is turned off
+
+2002-10-15 14:37  klacke
+
+	* include/yaws.hrl, include/yaws_api.hrl, man/yaws.conf.5,
+	src/yaws_config.erl, src/yaws_server.erl: fixed tilde username
+	expansion it didn't work, also made thta a configurable in the
+	config file. Added appmods a mechanism whereby an application can
+	fake directory hierachys. Useful for applications that deliver
+	content which isn't html. Many browsers doesn;t (read IE) don't
+	respect the Content-Disposition: header, rather they just use the
+	filename extension to determini which plugin to to render a file
+
+2002-10-14 21:36  jbevemyr
+
+	* src/yaws_api.erl: Fixed problem with parsing of multipart posts.
+	The problem occured when the parsing of a partial packet terminated
+	in the middle of parsing a possible boundary, for example if a
+	packet ended with a newline.
+
+2002-10-13 23:09  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_yaws.erl,
+	wiki/allPages.yaws, wiki/allRefsToMe.yaws, wiki/createNewPage.yaws,
+	wiki/deletePage.yaws, wiki/editFiles.yaws, wiki/getFile.yaws,
+	wiki/importFiles.yaws, wiki/lastEdited.yaws, wiki/showHistory.yaws,
+	wiki/showOldPage.yaws, wiki/showPage.yaws, wiki/wikiZombies.yaws:
+	Fixed problem with old win 98 IE
+
+2002-10-10 17:32  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-10-10 16:30  klacke
+
+	* include/yaws.hrl, src/yaws.erl, src/yaws.hrl, src/yaws_api.erl,
+	src/yaws_compile.erl, src/yaws_config.erl, src/yaws_debug.erl,
+	src/yaws_log.erl, src/yaws_ls.erl, src/yaws_server.erl,
+	src/yaws_ssl.erl: rearr of includefiles
+
+2002-10-10 14:00  klacke
+
+	* src/yaws_server.erl: bug in embedded mode getenv
+
+2002-10-10 13:12  klacke
+
+	* src/yaws_server.erl: [no log message]
+
+2002-10-10 13:07  klacke
+
+	* src/yaws_server.erl: make /tmp/yaws world writeable if we create
+	it
+
+2002-10-10 00:23  klacke
+
+	* www/todo.yaws: ""
+
+2002-10-09 09:37  klacke
+
+	* www/: contact.yaws, index.yaws: ""
+
+2002-10-07 23:53  klacke
+
+	* ChangeLog, vsn.mk, www/index.yaws: vsn 0.56 ci
+
+2002-10-07 23:37  klacke
+
+	* Makefile, src/mime.types, www/dynamic.yaws,
+	www/shopingcart/Makefile, www/shopingcart/shopcart.erl,
+	www/shopingcart/source.html, www/shopingcart/style.css: added more
+	documentation
+
+2002-10-07 18:26  lukeg
+
+	* src/yaws_server.erl, src/yaws_api.erl, ChangeLog: Fixed bug and
+	security hole introduced by my previous changes to URL decoding.
+	The problem was that I skipped URL decoding, so you could e.g. read
+	the source to a Yaws file by saying "foo.yaw%73" instead of
+	"foo.yaws".
+	
+	Now we initially decode the URL but not the query part. The query
+	part is decoded in yaws_api:parse_query. It can't be done earlier,
+	because unescaping characters like '&' and '=' would break the
+	parsing.
+
+2002-10-07 15:36  jbevemyr
+
+	* src/: yaws.hrl, yaws_config.erl: Upped read timeout and made it
+	configurable
+
+2002-10-06 23:59  klacke
+
+	* include/yaws_api.hrl, man/yaws_api.5, src/yaws_api.erl,
+	src/yaws_session_server.erl, www/EXHEAD, www/shopingcart/buy.yaws,
+	www/shopingcart/cart.yaws, www/shopingcart/index.yaws,
+	www/shopingcart/loginpost.yaws, www/shopingcart/logout.yaws,
+	www/shopingcart/mall.yaws, www/shopingcart/shopcart.erl,
+	www/shopingcart/shopcart_form.yaws, www/shopingcart/style.css:
+	wrote the shopppingcart example
+
+2002-10-06 19:32  jbevemyr
+
+	* applications/wiki/src/wiki_yaws.erl, src/yaws_config.erl,
+	src/yaws_server.erl: Fixed problem with chunked posts
+
+2002-10-02 13:20  klacke
+
+	* src/yaws_server.erl: bug in empty POST
+
+2002-10-02 13:20  klacke
+
+	* src/yaws_api.erl: bad export
+
+2002-10-01 20:53  jbevemyr
+
+	* applications/wiki/src/wiki.erl,
+	applications/wiki/src/wiki_yaws.erl, src/yaws_server.erl: Fixed
+	problem with file uploads
+
+2002-10-01 20:35  jbevemyr
+
+	* applications/wiki/wiki/allRefsToMe.yaws: [no log message]
+
+2002-09-27 14:46  klacke
+
+	* scripts/yaws.init.d: readded jb's chkconfig comment
+
+2002-09-27 14:39  klacke
+
+	* vsn.mk, www/dynamic.yaws: ""
+
+2002-09-27 14:20  klacke
+
+	* man/yaws_api.5: [no log message]
+
+2002-09-27 14:16  klacke
+
+	* scripts/yaws.init.d: ""
+
+2002-09-27 13:05  klacke
+
+	* applications/webmail/test.erl: ""
+
+2002-09-27 13:03  klacke
+
+	* applications/webmail/test.erl, man/yaws_api.5, src/yaws.erl,
+	src/yaws_api.erl, src/yaws_config.erl, src/yaws_ctl.erl,
+	src/yaws_server.erl, www/configuration.yaws: added support/docs for
+	embedded mode
+
+2002-09-26 15:08  klacke
+
+	* man/Makefile: ""
+
+2002-09-25 22:44  etnt
+
+	* src/Makefile: Now, tar also works on FreeBSD.
+
+2002-09-22 22:06  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_templates.erl,
+	wiki/allpages.gif, wiki/editfiles.gif, wiki/editme.gif,
+	wiki/history.gif, wiki/home.gif, wiki/lastedited.gif,
+	wiki/zombies.gif, wiki/custom.css: Some look and feel enhancements
+
+2002-09-20 22:10  jbevemyr
+
+	* applications/wiki/: src/wiki_format_txt.erl,
+	src/wiki_to_html.erl, wiki/FormattingWikiPages.wob: Fixed editTag
+	bug and added embedded HTML support
+
+2002-09-18 22:26  jbevemyr
+
+	* applications/wiki/src/wiki.erl,
+	applications/wiki/src/wiki_yaws.erl,
+	applications/wiki/wiki/addFile.yaws,
+	applications/wiki/wiki/allPages.yaws,
+	applications/wiki/wiki/allRefsToMe.yaws,
+	applications/wiki/wiki/copyFiles.yaws,
+	applications/wiki/wiki/createNewPage.yaws,
+	applications/wiki/wiki/deleteFiles.yaws,
+	applications/wiki/wiki/deletePage.yaws,
+	applications/wiki/wiki/editFiles.yaws,
+	applications/wiki/wiki/editPage.yaws,
+	applications/wiki/wiki/editTag.yaws,
+	applications/wiki/wiki/finalDeletePage.yaws,
+	applications/wiki/wiki/getFile.yaws,
+	applications/wiki/wiki/importFiles.yaws,
+	applications/wiki/wiki/lastEdited.yaws,
+	applications/wiki/wiki/previewNewPage.yaws,
+	applications/wiki/wiki/previewPage.yaws,
+	applications/wiki/wiki/previewTagged.yaws,
+	applications/wiki/wiki/putPassword.yaws,
+	applications/wiki/wiki/sendMeThePassword.yaws,
+	applications/wiki/wiki/showHistory.yaws,
+	applications/wiki/wiki/showOldPage.yaws,
+	applications/wiki/wiki/showPage.yaws,
+	applications/wiki/wiki/storeFiles.yaws,
+	applications/wiki/wiki/storeNewPage.yaws,
+	applications/wiki/wiki/storePage.yaws,
+	applications/wiki/wiki/storeTagged.yaws,
+	applications/wiki/wiki/wikiZombies.yaws, src/yaws_server.erl: Added
+	full argument chunking support in Wiki
+
+2002-09-18 01:15  klacke
+
+	* include/yaws_api.hrl, src/Makefile, src/yaws_api.erl,
+	src/yaws_config.erl, src/yaws_server.erl,
+	src/yaws_session_server.erl, src/yaws_sup.erl, www/api.yaws:
+	cache_refresh to 0 if debug, added a cookie_session-server for
+	persistant cookie sessions
+
+2002-09-18 01:05  klacke
+
+	* man/yaws_api.5: documented yaws_api
+
+2002-09-17 23:27  klacke
+
+	* man/yaws.conf.5: documented auth and some other config opts
+
+2002-09-17 21:46  klacke
+
+	* src/yaws_server.erl: fixed bug in jb's implementation of chunking
+	large files
+
+2002-09-17 21:44  klacke
+
+	* src/: yaws_compile.erl, yaws_ctl.erl, yaws_server.erl: a file
+	which has at least one compilation error shouldn't be cached in the
+	code cache, the nect time the same file is GET'ed it a
+	recompilation is attempted
+
+2002-09-16 23:55  jbevemyr
+
+	* src/: yaws.hrl, yaws_server.erl: [no log message]
+
+2002-09-16 23:36  jbevemyr
+
+	* src/yaws_server.erl: Fixed broken sending of files > 1000000
+	bytes. Added support for sending very large files by chunking.
+
+2002-09-16 19:05  klacke
+
+	* src/: yaws.erl, yaws_api.erl: ""
+
+2002-09-15 19:40  klacke
+
+	* src/yaws_api.erl: ""
+
+2002-09-15 17:04  klacke
+
+	* src/yaws_api.erl: api:parse_query/1
+
+2002-09-14 01:20  klacke
+
+	* src/yaws_server.erl: minor bug in streamed content
+
+2002-09-13 17:22  klacke
+
+	* include/yaws_api.hrl, src/yaws.erl, src/yaws_server.erl: support
+	for streamed large content from yaws code
+
+2002-09-12 17:26  klacke
+
+	* src/yaws_ctl.erl: multiple user by uid can now run yaws
+
+2002-09-12 17:25  klacke
+
+	* src/: yaws.hrl, yaws_compile.erl, yaws_config.erl, yaws_ctl.erl,
+	yaws_server.erl: javascript support in ehtml
+
+2002-09-12 04:51  lukeg
+
+	* ChangeLog: [no log message]
+
+2002-09-12 04:22  lukeg
+
+	* src/yaws_api.erl: Exported htmlize_char/1
+
+2002-09-12 04:21  lukeg
+
+	* src/yaws_server.erl: Removed url_decode in get_path/1 - it is too
+	early, causes problems if it unescapes &'s in the query string. Has
+	to wait until the query is parsed (and it looks like
+	yaws_api:do_parse_spec does it for us already)
+	
+	For redirects, using 302 for HTTP 1.0 browsers because they don't
+	understand 303. This change is small but noisy since I had to pass
+	another arg to handle_out_reply (many clauses).
+	
+	Added an {ehtml, ...} return type for out/1 functions. It does very
+	basic tuple->HTML expansions.
+	
+	Chunked encoding: skip accumulating 0-length chunks, e.g. when
+	out/1 returns an empty result, because they look like terminators.
+
+2002-09-10 00:03  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_templates.erl,
+	wiki/addFile.yaws, wiki/allPages.yaws, wiki/allRefsToMe.yaws,
+	wiki/copyFiles.yaws, wiki/createNewPage.yaws,
+	wiki/deleteFiles.yaws, wiki/deletePage.yaws, wiki/editFiles.yaws,
+	wiki/editPage.yaws, wiki/editTag.yaws, wiki/finalDeletePage.yaws,
+	wiki/importFiles.yaws, wiki/lastEdited.yaws,
+	wiki/previewNewPage.yaws, wiki/previewPage.yaws,
+	wiki/previewTagged.yaws, wiki/putPassword.yaws,
+	wiki/sendMeThePassword.yaws, wiki/showHistory.yaws,
+	wiki/showOldPage.yaws, wiki/showPage.yaws, wiki/storeFiles.yaws,
+	wiki/storeNewPage.yaws, wiki/storePage.yaws, wiki/storeTagged.yaws,
+	wiki/wikiZombies.yaws: w3c compliant html code
+
+2002-09-09 23:06  uid50986
+
+	* src/yaws_server.erl: added new break ret val from out/1 function
+
+2002-09-09 10:09  jbevemyr
+
+	* scripts/yaws.init.d: Added chkconfig support to init.d file
+
+2002-09-06 09:18  jbevemyr
+
+	* applications/wiki/src/: wiki.erl, wiki_templates.erl: Minor
+	modifications to the HTML templates
+
+2002-09-03 01:04  jbevemyr
+
+	* applications/wiki/src/wiki.erl: Some more interface improvements
+
+2002-09-03 00:32  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_to_html.erl,
+	src/wiki_yaws.erl, wiki/addFile.yaws, wiki/copyFiles.yaws,
+	wiki/deleteFiles.yaws, wiki/putPassword.yaws: improved file editing
+	interface
+
+2002-09-02 23:10  klacke
+
+	* www/index.yaws: ""
+
+2002-09-02 22:58  klacke
+
+	* ChangeLog: auto generated changelog
+
+2002-09-02 22:26  klacke
+
+	* src/yaws_api.erl, www/readpcookie.yaws: ""
+
+2002-09-02 21:44  klacke
+
+	* src/mime.types: ""
+
+2002-09-02 21:37  klacke
+
+	* vsn.mk, applications/webmail/Makefile, src/Makefile: [no log
+	message]
+
+2002-09-02 20:54  klacke
+
+	* LICENSE, applications/webmail/TOP, applications/webmail/att.yaws,
+	applications/webmail/compose.yaws, applications/webmail/index.yaws,
+	applications/webmail/logout.yaws, applications/webmail/mstil.css,
+	applications/webmail/read_mail.yaws,
+	applications/webmail/rmail.yaws, applications/webmail/test.erl,
+	applications/webmail/webmail.erl, applications/webmail/webmail.hrl,
+	applications/webmail/webmail_login.yaws,
+	applications/webmail/webmail_login_post.yaws, src/Makefile,
+	src/mime_type_c.erl, src/yaws_api.erl, src/yaws_server.erl,
+	src/yaws_ssl.erl: ""
+
+2002-09-01 21:14  jbevemyr
+
+	* applications/wiki/: src/Makefile, src/wiki.erl,
+	src/wiki_templates.erl, src/wiki_to_html.erl,
+	wiki/importFiles.yaws: Improved files interface
+
+2002-09-01 21:14  jbevemyr
+
+	* src/yaws_server.erl: Added support for OPTIONS http request
+
+2002-08-26 12:32  jbevemyr
+
+	* applications/wiki/: src/wiki.erl, src/wiki_yaws.erl,
+	wiki/allPages.yaws, wiki/allRefsToMe.yaws, wiki/createNewPage.yaws,
+	wiki/deletePage.yaws, wiki/editFiles.yaws, wiki/editPage.yaws,
+	wiki/editTag.yaws, wiki/finalDeletePage.yaws, wiki/getFile.yaws,
+	wiki/lastEdited.yaws, wiki/previewNewPage.yaws,
+	wiki/previewPage.yaws, wiki/previewTagged.yaws,
+	wiki/sendMeThePassword.yaws, wiki/showHistory.yaws,
+	wiki/showOldPage.yaws, wiki/showPage.yaws, wiki/storeFiles.yaws,
+	wiki/storeNewPage.yaws, wiki/storePage.yaws, wiki/storeTagged.yaws,
+	wiki/wikiZombies.yaws: Ported to new parse_post_data api
+
+2002-08-26 11:26  jbevemyr
+
+	* src/yaws_api.erl: Added some documentation
+
+2002-08-26 11:25  jbevemyr
+
+	* src/yaws_server.erl: Fixed probem with using parse_post_data for
+	multipart posts when partial_post_size is not set
+
+2002-08-24 00:44  seanhinde
+
+	* include/yaws_api.hrl: added cont and state to this yaws_api.hrl
+
+2002-08-24 00:34  seanhinde
+
+	* src/yaws.hrl: tidy up merge slightly
+
+2002-08-24 00:26  seanhinde
+
+	* src/: yaws.hrl, yaws_api.erl, yaws_config.erl, yaws_server.erl:
+	Changed implementation of multipart form data. There is a new
+	config parameter called partial_post_size which if set to an
+	integer value will cause the content of the post content to be sent
+	to the out/1 function in chunks of this size.
+	
+	Changed implementation of multipart form data. There is a new
+	config parameter called partial_post_size which if set to an
+	integer value will cause the content of the post content to be sent
+	to the out/1 function in chunks of this size.
+	
+	It is possible to get the server to maintain a state on behalf of
+	the out/1 user by returning {get_more, Cont, State}.
+	
+	yaws_api:parse_post_data/1 will return either:
+	
+	{cont, Cont, Res} where Res is new result(s) from this segment.
+	This indicates that there is more data to come and the out/1
+	function should return {get_more, Cont, User_state} where
+	User_state might usefully be a File Descriptor.  Changed
+	implementation of multipart form data. There is a new config
+	parameter called partial_post_size which if set to an integer value
+	will cause the content of the post content to be sent to the out/1
+	function in chunks of this size.
+	
+	It is possible to get the server to maintain a state on behalf of
+	the out/1 user by returning {get_more, Cont, State}.
+	
+	yaws_api:parse_post_data/1 will now return either:
+	
+	{cont, Cont, Res} where Res is new result(s) from this segment.
+	This indicates that there is more data to come and the out/1
+	function should return {get_more, Cont, User_state} where
+	User_state might usefully be a File Descriptor.
+	
+	or {result, Res} if this is the last (or only) segment.
+	
+	Res is a list of {header, Header} | {part_body, Binary} | {body,
+	Binary}
+	
+	Example usage could be:
+	
+	<erl>
+	
+	out(A) ->	 case yaws_api:parse_post_data(A) of		
+	{cont, Cont, Res} ->			St = handle_res(A, Res),   
+			{get_more, Cont, St};		  {result, Res} -> 
+			  handle_res(A, Res),			 {html,
+	f("<pre>Done </pre>",[])}	 end.
+	
+	handle_res(A, [{head, Name}|T]) ->     
+	io:format("head:~p~n",[Name]),	    handle_res(A, T); handle_res(A,
+	[{part_body, Data}|T]) ->      io:format("part_body:~p~n",[Data]), 
+	    handle_res(A, T); handle_res(A, [{body, Data}|T]) ->     
+	io:format("body:~p~n",[Data]),	    handle_res(A, T); handle_res(A,
+	[]) ->	    io:format("End_res~n").
+	
+	</erl>
+
+2002-08-22 18:04  jbevemyr
+
+	* src/yaws_api.erl: Added a third parameter to the tuples returned
+	by parse_post_data when parsing multipart/form-data. This third
+	argument contains the options from the content-disposition header.
+
+2002-08-22 18:02  jbevemyr
+
+	* applications/wiki/: README, src/wiki.erl: Remove the explicit
+	matching of options and improved the file upload interface.
+
+2002-08-21 12:50  jbevemyr
+
+	* applications/wiki/: include.mk, src/wiki.erl,
+	src/wiki_to_html.erl: minor fixes
+
+2002-08-20 22:25  klacke
+
+	* src/Makefile: new make target for joe
+
+2002-08-20 22:25  klacke
+
+	* src/yaws_config.erl: didn't compile
+
+2002-08-05 16:38  seanhinde
+
+	* scripts/yaws.conf.basic_auth, src/yaws.hrl, src/yaws_config.erl,
+	src/yaws_server.erl: Added Basic Authentication support with a new
+	subsection to the server config <auth> .. </auth>. Attributes valid
+	in the subsection are dir = /path/to/secure/pages (can have more
+	than one), realm = Text, where Text is presented to the user in the
+	password dialog, and user = username:passwd (can have more than
+	one). This is not perfect yet, url_type/3 does more than just
+	decode the url.. but it is a step. An example of the new config is
+	in the file yaws.conf.basic_auth in the scripts dir
+
+2002-07-19 18:18  mikl
+
+	* CHANGELOG, applications/wiki/src/wiki.erl: Bugfix: Function
+	clause error fixed when the number of HTTP parameters for
+	wiki:editPage/3 is different from 1 or 3
+
+2002-07-19 17:58  mikl
+
+	* CHANGELOG, applications/wiki/src/wiki_to_html.erl,
+	applications/wiki/wiki/editTag.yaws: Wiki: Added the editTag page,
+	that prevented to edit feedback area
+
+2002-07-19 17:47  mikl
+
+	* applications/wiki/ebin/.keepme: Added a .keepme file in wiki
+	ebin, to be sure the dir is checked out with cvs -PAd
+
+2002-07-05 10:29  jbevemyr
+
+	* src/: yaws_api.erl, yaws_server.erl: Added support for IE-style
+	URL encoding
+
+2002-07-03 23:57  klacke
+
+	* vsn.mk: [no log message]
+
+2002-07-02 22:26  jbevemyr
+
+	* applications/wiki/src/wiki.erl: [no log message]
+
+2002-07-01 22:30  klacke
+
+	* www/index.yaws: ""
+
+2002-07-01 22:18  klacke
+
+	* Makefile, vsn.mk, applications/webmail/HEAD,
+	applications/webmail/Makefile, applications/webmail/TOP,
+	applications/webmail/blurulr3.gif,
+	applications/webmail/blurulr4.gif, applications/webmail/index.yaws,
+	applications/webmail/mail.gif, applications/webmail/mstil.css,
+	applications/webmail/webmail.erl, applications/webmail/webmail.hrl,
+	applications/webmail/webmail_login.yaws,
+	applications/webmail/webmail_login_post.yaws,
+	applications/webmail/ylwmail.gif, scripts/Makefile,
+	src/yaws_server.erl, www/todo.yaws, www/testdir/index.html: ""
+
+2002-06-28 00:46  jbevemyr
+
+	* www/: dynamic.yaws, history.yaws: Documented new features
+
+2002-06-28 00:45  jbevemyr
+
+	* src/: yaws_api.erl, yaws_server.erl: Fixed 303 host:port bug.
+	Added yaws_api:url_decode to get_path/1. Added
+	{redirect_local,Path} and {redirect, Url} as possible return values
+	to out/1. Added fullpath element to arg record.
+
+2002-06-28 00:44  jbevemyr
+
+	* scripts/yaws.ss: Fixed heart bug
+
+2002-06-28 00:43  jbevemyr
+
+	* include/yaws_api.hrl: Added fullpath to arg
+
+2002-06-28 00:40  jbevemyr
+
+	* applications/wiki/: Makefile, README, include.mk, vsn.mk,
+	src/Makefile, src/wiki.erl, src/wiki_diff.erl,
+	src/wiki_format_txt.erl, src/wiki_split.erl,
+	src/wiki_templates.erl, src/wiki_to_html.erl, src/wiki_utils.erl,
+	src/wiki_vsn.template, src/wiki_yaws.erl, wiki/ALockedPage.wob,
+	wiki/AnUnlockedPage.wob, wiki/Examples.wob,
+	wiki/FormattingWikiPages.wob, wiki/allPages.yaws,
+	wiki/allRefsToMe.yaws, wiki/allpages.gif, wiki/createNewPage.yaws,
+	wiki/deletePage.yaws, wiki/edit.gif, wiki/editFiles.yaws,
+	wiki/editPage.yaws, wiki/editfiles.gif, wiki/editme.gif,
+	wiki/finalDeletePage.yaws, wiki/getFile.yaws, wiki/history.gif,
+	wiki/home.gif, wiki/icon.gif, wiki/index.yaws, wiki/info.gif,
+	wiki/lastEdited.yaws, wiki/lastedited.gif, wiki/locked.gif,
+	wiki/normal.gif, wiki/old.gif, wiki/previewNewPage.yaws,
+	wiki/previewPage.yaws, wiki/previewTagged.yaws,
+	wiki/sendMeThePassword.yaws, wiki/showHistory.yaws,
+	wiki/showOldPage.yaws, wiki/showPage.yaws, wiki/storeFiles.yaws,
+	wiki/storeNewPage.yaws, wiki/storePage.yaws, wiki/storeTagged.yaws,
+	wiki/wikiZombies.yaws, wiki/zombies.gif: Added Joe's Wiki code
+
+2002-06-27 10:06  jbevemyr
+
+	* www/query.yaws: Fixed link to point to local instance
+
+2002-06-20 14:18  etnt
+
+	* man/yaws.1: Added the -heart switch
+
+2002-06-20 14:14  etnt
+
+	* scripts/yaws.ss: Added support for the '-heart' switch.
+
+2002-06-20 12:11  jbevemyr
+
+	* www/man.yaws: Added illegal character check to input to man page
+	command to stop cracking
+
+2002-06-19 23:37  etnt
+
+	* scripts/yaws.ss: Added the '-sname <Node>' switch to the yaws
+	script
+
+2002-06-19 17:02  jbevemyr
+
+	* src/yaws_api.erl: pre_ssi_string now use list version of htmlize
+	since the binary version craches for large strings, eg man less
+
+2002-06-19 15:45  jbevemyr
+
+	* src/yaws_server.erl: [no log message]
+
+2002-06-19 15:02  klacke
+
+	* man/yaws.1, www/index.yaws: ""
+
+2002-06-19 14:50  klacke
+
+	* src/yaws_config.erl, src/yaws_log.erl, src/yaws_server.erl,
+	www/dynamic.yaws, www/history.yaws, www/index.yaws: ""
+
+2002-06-19 13:30  jbevemyr
+
+	* src/yaws_server.erl: code:purge added for old modules
+
+2002-06-19 12:59  jbevemyr
+
+	* src/yaws_api.erl, www/api.yaws, www/history.yaws, www/man.yaws,
+	www/post.yaws, www/query.yaws: Updated parse_post_data api to
+	support multiline post data
+
+2002-06-19 00:53  jbevemyr
+
+	* include.mk: [no log message]
+
+2002-06-19 00:50  jbevemyr
+
+	* include.mk, src/yaws_api.erl: Added support for multipart post
+	data. Added parse_post api function.
+
+2002-06-18 16:45  klacke
+
+	* scripts/Makefile: ""
+
+2002-06-18 16:33  klacke
+
+	* README, vsn.mk, man/yaws.conf.5, src/yaws.hrl,
+	src/yaws_config.erl, src/yaws_ls.erl, src/yaws_server.erl,
+	www/history.yaws: ""
+
+2002-06-18 13:10  klacke
+
+	* src/yaws_server.erl, www/api.yaws, www/configuration.yaws,
+	www/dynamic.yaws, www/history.yaws, www/index.yaws,
+	www/motivation.yaws, www/setcookie.yaws, www/setpcookie.yaws,
+	www/simple.yaws, www/shopingcart/cart.yaws, www/testdir/index.html:
+	""
+
+2002-06-17 22:58  klacke
+
+	* www/testdir/: index.html, xxåäöxx.jpg: ""
+
+2002-06-17 22:48  klacke
+
+	* www/: EXHEAD, index.yaws, query.yaws: ""
+
+2002-06-17 14:26  etnt
+
+	* man/yaws.1, scripts/yaws.ss, src/yaws_server.erl: Added the '-r
+	<Mod>' switch.
+
+2002-06-17 14:16  etnt
+
+	* README: Testing CVS commit.
+
+2002-06-17 14:12  etnt
+
+	* Makefile: ""
+
+2002-06-16 23:05  klacke
+
+	* scripts/yaws.init.d: ""
+
+2002-06-16 22:55  klacke
+
+	* www/index.yaws: ""
+
+2002-06-16 22:51  klacke
+
+	* vsn.mk, man/yaws.1, scripts/yaws.ss, src/yaws_api.erl,
+	src/yaws_server.erl, www/history.yaws: ""
+
+2002-06-16 17:00  klacke
+
+	* Makefile, include.mk, scripts/Install, scripts/yaws.ss,
+	src/yaws_api.erl, src/yaws_ctl.erl, src/yaws_debug.erl,
+	src/yaws_server.erl, www/configuration.yaws, www/history.yaws,
+	www/man.yaws, www/stil.css: ""
+
+2002-06-15 12:51  klacke
+
+	* vsn.mk, www/history.yaws: ""
+
+2002-06-15 12:24  klacke
+
+	* man/yaws.conf.5, src/yaws.hrl, src/yaws_compile.erl,
+	src/yaws_config.erl, src/yaws_server.erl, www/small.yaws,
+	www/static.html, src/yaws_compile.erl: ""
+
+2002-06-14 15:27  klacke
+
+	* applications/webmail/: Makefile, smtp_client.erl: ""
+
+2002-06-14 13:33  klacke
+
+	* applications/webmail/: pop3lib_cli.erl, smtp_client.erl: ""
+
+2002-06-14 10:02  klacke
+
+	* src/Makefile, src/yaws_api.erl, src/yaws_server.erl, www/EXHEAD,
+	www/todo.yaws, www/shopingcart/cart.yaws,
+	www/shopingcart/mall.yaws: ""
+
+2002-06-13 13:55  klacke
+
+	* www/stats.yaws: ""
+
+2002-06-13 12:35  klacke
+
+	* Makefile, vsn.mk, man/Makefile, man/yaws.1, man/yaws.conf.5,
+	scripts/yaws.conf.template, scripts/yaws.conf.template.local,
+	scripts/yaws.ss, src/yaws.erl, src/yaws_config.erl,
+	www/configuration.yaws, www/dynamic.yaws, www/history.yaws,
+	www/index.yaws: ""
+
+2002-06-12 17:40  klacke
+
+	* vsn.mk, src/yaws.hrl, src/yaws_api.erl, src/yaws_compile.erl,
+	src/yaws_ls.erl, src/yaws_server.erl, www/api.yaws,
+	www/dynamic.yaws, www/history.yaws, www/index.yaws, www/post.yaws,
+	www/readcookie.yaws, www/readpcookie.yaws, www/redirect.yaws,
+	www/redirect2.yaws, www/setcookie.yaws, www/setpcookie.yaws,
+	www/simple_ex2.yaws, www/simple_ex3.yaws, www/small.yaws: new ret
+	vals from out/1
+
+2002-06-11 15:46  klacke
+
+	* vsn.mk, src/yaws.erl, src/yaws_server.erl, www/history.yaws: ""
+
+2002-06-11 11:23  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-06-11 11:18  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-06-11 01:28  klacke
+
+	* src/: Makefile, yaws.erl, yaws_compile.erl, yaws_debug.erl,
+	yaws_server.erl, yaws_ssl.erl: ""
+
+2002-06-10 23:35  klacke
+
+	* vsn.mk, ebin/.empty, ebin/erl_crash.dump, ebin/ewww.app,
+	ebin/yaws.app, src/yaws_api.erl, src/yaws_config.erl,
+	src/yaws_ls.erl, src/yaws_server.erl, www/history.yaws,
+	www/post.yaws, www/static.html, www/todo.yaws: ""
+
+2002-06-10 18:48  klacke
+
+	* scripts/make-upload: ""
+
+2002-06-10 18:30  klacke
+
+	* scripts/make-upload: ""
+
+2002-06-10 18:01  klacke
+
+	* LICENSE, Makefile, vsn.mk, ebin/yaws.app, scripts/Makefile,
+	src/Makefile, src/yaws.erl, src/yaws_server.erl,
+	src/yaws_vsn.template, www/static.html: ""
+
+2002-06-03 15:16  klacke
+
+	* src/yaws_server.erl, vsn.mk: ""
+
+2002-06-03 14:44  klacke
+
+	* scripts/make-release, src/yaws_server.erl: ""
+
+2002-06-03 12:57  klacke
+
+	* src/yaws_ls.erl, www/index.yaws: ""
+
+2002-05-30 13:09  klacke
+
+	* vsn.mk, ebin/yaws.app, src/yaws_server.erl,
+	www/configuration.yaws, www/history.yaws, www/index.yaws,
+	www/todo.yaws: ""
+
+2002-05-30 11:09  klacke
+
+	* src/: yaws.erl, yaws_api.erl, yaws_app.erl, yaws_compile.erl,
+	yaws_config.erl, yaws_ctl.erl, yaws_debug.erl, yaws_log.erl,
+	yaws_ls.erl, yaws_server.erl, yaws_ssl.erl: ""
+
+2002-05-30 10:13  klacke
+
+	* src/yaws_ssl.erl: ""
+
+2002-05-30 00:28  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-05-29 23:54  klacke
+
+	* ebin/yaws.app, src/Makefile, src/yaws.erl, src/yaws.hrl,
+	src/yaws_config.erl, src/yaws_server.erl, ssl/cert.example,
+	ssl/key.example, www/todo.yaws: ""
+
+2002-04-30 11:36  klacke
+
+	* ebin/yaws.app, scripts/make-release, src/yaws_server.erl: ""
+
+2002-04-30 11:07  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-04-30 10:51  klacke
+
+	* vsn.mk: ""
+
+2002-04-30 10:43  klacke
+
+	* ebin/yaws.app, include/yaws_api.hrl, scripts/yaws.ss,
+	src/Makefile, src/yaws.erl, src/yaws_ctl.erl, src/yaws_ls.erl,
+	src/yaws_server.erl, README: ""
+
+2002-04-20 01:22  klacke
+
+	* ebin/yaws.app, include/yaws_api.hrl, src/yaws_server.erl,
+	www/todo.yaws: ""
+
+2002-03-29 17:52  klacke
+
+	* src/yaws_log.erl, vsn.mk, www/history.yaws: ""
+
+2002-03-28 11:51  klacke
+
+	* src/: Makefile, yaws.erl, yaws.hrl, yaws_config.erl,
+	yaws_server.erl: ""
+
+2002-03-27 12:21  klacke
+
+	* ebin/yaws.app, src/yaws_server.erl, www/dynamic.yaws: ""
+
+2002-03-26 18:46  klacke
+
+	* scripts/make-release: ""
+
+2002-03-26 18:42  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-03-26 18:31  klacke
+
+	* vsn.mk, src/yaws.erl, src/yaws_log.erl, src/yaws_server.erl,
+	www/history.yaws: ""
+
+2002-03-26 12:58  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-03-24 13:27  klacke
+
+	* src/yaws_compile.erl: ""
+
+2002-03-21 16:30  klacke
+
+	* www/stil.css: ""
+
+2002-03-17 12:22  klacke
+
+	* ebin/yaws.app, scripts/yaws.ss, src/yaws_log.erl,
+	src/yaws_server.erl, www/history.yaws: ""
+
+2002-03-08 21:15  klacke
+
+	* www/configuration.yaws: ""
+
+2002-03-08 21:01  klacke
+
+	* vsn.mk, ebin/yaws.app, src/yaws_config.erl: ""
+
+2002-03-04 22:51  klacke
+
+	* vsn.mk, ebin/yaws.app, src/yaws_ls.erl, www/history.yaws: ""
+
+2002-03-04 22:23  klacke
+
+	* vsn.mk, ebin/yaws.app, scripts/Install, src/yaws_config.erl,
+	src/yaws_log.erl: ""
+
+2002-03-04 22:03  klacke
+
+	* vsn.mk, ebin/yaws.app, scripts/Install, scripts/Makefile: ""
+
+2002-03-04 21:32  klacke
+
+	* vsn.mk, scripts/Makefile: ""
+
+2002-03-04 21:26  klacke
+
+	* vsn.mk, bin/.foobar, scripts/Makefile, scripts/make-release,
+	www/history.yaws, vsn.mk, scripts/make-release: ""
+
+2002-03-04 20:29  klacke
+
+	* Makefile, vsn.mk, scripts/make-release: ""
+
+2002-03-04 19:30  klacke
+
+	* www/shopingcart/cart.yaws, www/shopingcart/junk.jpg,
+	www/shopingcart/mall.yaws, Makefile, README, vsn.mk, ebin/yaws.app,
+	scripts/Makefile, scripts/yaws.ss, src/yaws.erl, src/yaws.hrl,
+	src/yaws_api.erl, src/yaws_compile.erl, src/yaws_config.erl,
+	src/yaws_debug.erl, src/yaws_log.erl, src/yaws_server.erl,
+	www/EXHEAD, www/TOPTAB, www/api.yaws, www/configuration.yaws,
+	www/examples.yaws, www/history.yaws, www/index.yaws,
+	www/pcookie.yaws, www/readcookie.yaws, www/readpcookie.yaws,
+	www/setcookie.yaws, www/setpcookie.yaws, www/simple.yaws,
+	www/stil.css, www/todo.yaws, www/contact.yaws, www/simple_ex3.yaws,
+	www/stats_ex.yaws: ""
+
+2002-02-25 21:50  klacke
+
+	* Makefile, ebin/yaws.app, include/yaws_api.hrl, src/Makefile,
+	src/yaws.erl, src/yaws.hrl, src/yaws_api.erl, src/yaws_compile.erl,
+	src/yaws_config.erl, src/yaws_server.erl, www/EXHEAD, www/HEAD,
+	www/TOPTAB, www/api.yaws, www/cookies.yaws, www/dynamic.yaws,
+	www/examples.yaws, www/history.yaws, www/index.yaws,
+	www/pcookie.yaws, www/readcookie.yaws, www/readpcookie.yaws,
+	www/setcookie.yaws, www/setpcookie.yaws, www/simple.yaws,
+	www/stil.css: ""
+
+2002-02-24 10:46  klacke
+
+	* www/history.yaws: ""
+
+2002-02-20 16:46  klacke
+
+	* ebin/yaws.app, scripts/yaws.conf.template, src/yaws_api.erl,
+	src/yaws_server.erl, www/END, www/EXHEAD, www/HEAD, www/TOPTAB,
+	www/cookies.yaws, www/examples.yaws, www/form.yaws, www/index.yaws,
+	www/post.yaws, www/setcookie.yaws, www/simple.yaws, www/stats.yaws,
+	www/stil.css, www/todo.yaws: ""
+
+2002-02-18 11:45  lukeg
+
+	* src/yaws_server.erl: Bugfix s/yaws:format_ip/yaws:fmt_ip/
+
+2002-02-13 21:41  klacke
+
+	* vsn.mk: ""
+
+2002-02-13 21:37  klacke
+
+	* www/TOPTAB: ""
+
+2002-02-13 21:33  klacke
+
+	* src/yaws_server.erl, www/EXHEAD, www/HEAD, www/TOPTAB,
+	www/index.yaws: ""
+
+2002-02-13 19:39  klacke
+
+	* bin/yaws, src/yaws_server.erl, www/TOPTAB, www/index.yaws,
+	bin/yaws: ""
+
+2002-02-13 09:15  klacke
+
+	* src/yaws_api.erl, src/yaws_server.erl, www/END, www/stats.yaws:
+	""
+
+2002-02-12 14:19  klacke
+
+	* src/yaws_api.erl, www/EXHEAD, www/TOPTAB, www/configuration.yaws,
+	www/dynamic.yaws, www/examples.yaws, www/index.html,
+	www/index.yaws, www/motivation.yaws, www/todo.yaws, www/top.yaws:
+	""
+
+2002-02-12 12:21  klacke
+
+	* bin/yaws, scripts/Makefile, scripts/yaws.conf.template.local,
+	scripts/yaws.ss, src/yaws_log.erl, src/yaws_server.erl, www/EXHEAD,
+	www/HEAD, www/TOPTAB, www/index.html, www/todo.yaws: ""
+
+2002-02-12 01:55  klacke
+
+	* Makefile, vsn.mk, www/index.yaws, www/todo.yaws: ""
+
+2002-02-12 01:15  klacke
+
+	* Makefile, include.mk, include.mk.in, bin/yaws, ebin/yaws.beam,
+	ebin/yaws_api.beam, ebin/yaws_app.beam, ebin/yaws_config.beam,
+	ebin/yaws_debug.beam, ebin/yaws_log.beam, ebin/yaws_ls.beam,
+	ebin/yaws_server.beam, ebin/yaws_sup.beam, scripts/Makefile,
+	scripts/mangle, scripts/yaws.conf.template, scripts/yaws.ss,
+	sourceforge-site/index.html, sourceforge-site/yaws_head3.gif,
+	sourceforge-site/yaws_pb2.gif, src/Makefile, src/yaws.hrl,
+	src/yaws_config.erl, src/yaws_server.erl, www/HEAD, www/index.yaws,
+	www/todo.yaws, ebin/bassert.beam, ebin/ewww.beam,
+	ebin/ewww_app.beam, ebin/ewww_config.beam, ebin/ewww_server.beam,
+	ebin/ewww_sup.beam, ebin/yaws.beam, ebin/yaws_api.beam,
+	ebin/yaws_app.beam, ebin/yaws_config.beam, ebin/yaws_debug.beam,
+	ebin/yaws_log.beam, ebin/yaws_ls.beam, ebin/yaws_server.beam,
+	ebin/yaws_sup.beam: ""
+
+2002-02-11 17:53  klacke
+
+	* src/yaws_server.erl: ""
+
+2002-02-11 17:19  klacke
+
+	* Makefile, include.mk, include.mk.in, vsn.mk, src/Makefile,
+	src/yaws.app.src, src/yaws.conf, src/yaws.hrl, src/yaws_app.erl,
+	src/yaws_ls.erl, src/yaws_sup.erl, ebin/bassert.beam,
+	ebin/ewww.app, ebin/ewww.beam, ebin/ewww_app.beam,
+	ebin/ewww_config.beam, ebin/ewww_server.beam, ebin/ewww_sup.beam,
+	ebin/yaws.app, ebin/yaws.beam, src/yaws.erl, src/yaws_api.erl,
+	src/yaws_config.erl, src/yaws_debug.erl, src/yaws_debug.hrl,
+	src/yaws_log.erl, src/yaws_server.erl, ebin/erl_crash.dump,
+	ebin/yaws_api.beam, ebin/yaws_app.beam, ebin/yaws_config.beam,
+	ebin/yaws_debug.beam, ebin/yaws_log.beam, ebin/yaws_ls.beam,
+	ebin/yaws_server.beam, ebin/yaws_sup.beam, include/yaws_api.hrl,
+	priv/mime.types, www/HEAD, www/TOPTAB, www/form.yaws,
+	www/index.html, www/index.yaws, www/motivation.yaws, www/post.yaws,
+	www/spacer.gif, www/todo.yaws, www/top.yaws, www/EXHEAD,
+	www/configuration.yaws, www/dynamic.yaws, www/examples.yaws,
+	www/simple.yaws, www/simple_ex1.yaws, www/simple_ex2.yaws,
+	www/.xvpics/hyber.org.gif, www/.xvpics/hyber_org.jpg,
+	www/icons/PythonPowered.png, www/icons/README, www/icons/a.gif,
+	www/icons/alert.black.gif, www/icons/alert.red.gif,
+	www/icons/apache_pb.gif, www/icons/back.gif,
+	www/icons/ball.gray.gif, www/icons/ball.red.gif,
+	www/icons/binary.gif, www/icons/binhex.gif, www/icons/blank.gif,
+	www/icons/bomb.gif, www/icons/box1.gif, www/icons/box2.gif,
+	www/icons/broken.gif, www/icons/burst.gif, www/icons/c.gif,
+	www/icons/comp.blue.gif, www/icons/comp.gray.gif,
+	www/icons/compressed.gif, www/icons/continued.gif,
+	www/icons/dir.gif, www/icons/down.gif, www/icons/dvi.gif,
+	www/icons/erl.gif, www/icons/f.gif, www/icons/folder.gif,
+	www/icons/folder.open.gif, www/icons/folder.sec.gif,
+	www/icons/forward.gif, www/icons/generic.gif,
+	www/icons/generic.red.gif, www/icons/generic.sec.gif,
+	www/icons/gnu-head-tiny.jpg, www/icons/hand.right.gif,
+	www/icons/hand.up.gif, www/icons/hrl.gif, www/icons/icon.sheet.gif,
+	www/icons/image1.gif, www/icons/image2.gif, www/icons/image3.gif,
+	www/icons/index.gif, www/icons/layout.gif, www/icons/left.gif,
+	www/icons/link.gif, www/icons/mailman-large.jpg,
+	www/icons/mailman.jpg, www/icons/movie.gif, www/icons/p.gif,
+	www/icons/patch.gif, www/icons/pdf.gif, www/icons/php4.gif,
+	www/icons/pie0.gif, www/icons/pie1.gif, www/icons/pie2.gif,
+	www/icons/pie3.gif, www/icons/pie4.gif, www/icons/pie5.gif,
+	www/icons/pie6.gif, www/icons/pie7.gif, www/icons/pie8.gif,
+	www/icons/portal.gif, www/icons/ps.gif, www/icons/quill.gif,
+	www/icons/right.gif, www/icons/screw1.gif, www/icons/screw2.gif,
+	www/icons/script.gif, www/icons/sound1.gif, www/icons/sound2.gif,
+	www/icons/sphere1.gif, www/icons/sphere2.gif, www/icons/tar.gif,
+	www/icons/tex.gif, www/icons/text.gif, www/icons/transfer.gif,
+	www/icons/unknown.gif, www/icons/up.gif, www/icons/uu.gif,
+	www/icons/uuencoded.gif, www/icons/world1.gif,
+	www/icons/world2.gif, www/icons/yaws.gif, www/icons/yawsY.gif,
+	www/icons/yaws_head.gif, www/icons/yaws_pb.gif,
+	www/icons/small/README.txt, www/icons/small/back.gif,
+	www/icons/small/binary.gif, www/icons/small/binhex.gif,
+	www/icons/small/blank.gif, www/icons/small/broken.gif,
+	www/icons/small/burst.gif, www/icons/small/comp1.gif,
+	www/icons/small/comp2.gif, www/icons/small/compressed.gif,
+	www/icons/small/continued.gif, www/icons/small/dir.gif,
+	www/icons/small/dir2.gif, www/icons/small/doc.gif,
+	www/icons/small/forward.gif, www/icons/small/generic.gif,
+	www/icons/small/generic2.gif, www/icons/small/generic3.gif,
+	www/icons/small/image.gif, www/icons/small/image2.gif,
+	www/icons/small/index.gif, www/icons/small/key.gif,
+	www/icons/small/movie.gif, www/icons/small/patch.gif,
+	www/icons/small/ps.gif, bin/yaws, scripts/Makefile, scripts/mangle,
+	scripts/yaws.conf, scripts/yaws.conf.template, scripts/yaws.ss,
+	www/icons/small/rainbow.gif, www/icons/small/sound.gif,
+	www/icons/small/sound2.gif, www/icons/small/tar.gif,
+	www/icons/small/text.gif, www/icons/small/transfer.gif,
+	www/icons/small/unknown.gif, www/icons/small/uu.gif: first time
+	import
+
+2002-02-11 17:19  klacke
+
+	* Makefile, include.mk, include.mk.in, vsn.mk, src/Makefile,
+	src/yaws.app.src, src/yaws.conf, src/yaws.hrl, src/yaws_app.erl,
+	src/yaws_ls.erl, src/yaws_sup.erl, ebin/bassert.beam,
+	ebin/ewww.app, ebin/ewww.beam, ebin/ewww_app.beam,
+	ebin/ewww_config.beam, ebin/ewww_server.beam, ebin/ewww_sup.beam,
+	ebin/yaws.app, ebin/yaws.beam, src/yaws.erl, src/yaws_api.erl,
+	src/yaws_config.erl, src/yaws_debug.erl, src/yaws_debug.hrl,
+	src/yaws_log.erl, src/yaws_server.erl, ebin/erl_crash.dump,
+	ebin/yaws_api.beam, ebin/yaws_app.beam, ebin/yaws_config.beam,
+	ebin/yaws_debug.beam, ebin/yaws_log.beam, ebin/yaws_ls.beam,
+	ebin/yaws_server.beam, ebin/yaws_sup.beam, include/yaws_api.hrl,
+	priv/mime.types, www/HEAD, www/TOPTAB, www/form.yaws,
+	www/index.html, www/index.yaws, www/motivation.yaws, www/post.yaws,
+	www/spacer.gif, www/todo.yaws, www/top.yaws, www/EXHEAD,
+	www/configuration.yaws, www/dynamic.yaws, www/examples.yaws,
+	www/simple.yaws, www/simple_ex1.yaws, www/simple_ex2.yaws,
+	www/.xvpics/hyber.org.gif, www/.xvpics/hyber_org.jpg,
+	www/icons/PythonPowered.png, www/icons/README, www/icons/a.gif,
+	www/icons/alert.black.gif, www/icons/alert.red.gif,
+	www/icons/apache_pb.gif, www/icons/back.gif,
+	www/icons/ball.gray.gif, www/icons/ball.red.gif,
+	www/icons/binary.gif, www/icons/binhex.gif, www/icons/blank.gif,
+	www/icons/bomb.gif, www/icons/box1.gif, www/icons/box2.gif,
+	www/icons/broken.gif, www/icons/burst.gif, www/icons/c.gif,
+	www/icons/comp.blue.gif, www/icons/comp.gray.gif,
+	www/icons/compressed.gif, www/icons/continued.gif,
+	www/icons/dir.gif, www/icons/down.gif, www/icons/dvi.gif,
+	www/icons/erl.gif, www/icons/f.gif, www/icons/folder.gif,
+	www/icons/folder.open.gif, www/icons/folder.sec.gif,
+	www/icons/forward.gif, www/icons/generic.gif,
+	www/icons/generic.red.gif, www/icons/generic.sec.gif,
+	www/icons/gnu-head-tiny.jpg, www/icons/hand.right.gif,
+	www/icons/hand.up.gif, www/icons/hrl.gif, www/icons/icon.sheet.gif,
+	www/icons/image1.gif, www/icons/image2.gif, www/icons/image3.gif,
+	www/icons/index.gif, www/icons/layout.gif, www/icons/left.gif,
+	www/icons/link.gif, www/icons/mailman-large.jpg,
+	www/icons/mailman.jpg, www/icons/movie.gif, www/icons/p.gif,
+	www/icons/patch.gif, www/icons/pdf.gif, www/icons/php4.gif,
+	www/icons/pie0.gif, www/icons/pie1.gif, www/icons/pie2.gif,
+	www/icons/pie3.gif, www/icons/pie4.gif, www/icons/pie5.gif,
+	www/icons/pie6.gif, www/icons/pie7.gif, www/icons/pie8.gif,
+	www/icons/portal.gif, www/icons/ps.gif, www/icons/quill.gif,
+	www/icons/right.gif, www/icons/screw1.gif, www/icons/screw2.gif,
+	www/icons/script.gif, www/icons/sound1.gif, www/icons/sound2.gif,
+	www/icons/sphere1.gif, www/icons/sphere2.gif, www/icons/tar.gif,
+	www/icons/tex.gif, www/icons/text.gif, www/icons/transfer.gif,
+	www/icons/unknown.gif, www/icons/up.gif, www/icons/uu.gif,
+	www/icons/uuencoded.gif, www/icons/world1.gif,
+	www/icons/world2.gif, www/icons/yaws.gif, www/icons/yawsY.gif,
+	www/icons/yaws_head.gif, www/icons/yaws_pb.gif,
+	www/icons/small/README.txt, www/icons/small/back.gif,
+	www/icons/small/binary.gif, www/icons/small/binhex.gif,
+	www/icons/small/blank.gif, www/icons/small/broken.gif,
+	www/icons/small/burst.gif, www/icons/small/comp1.gif,
+	www/icons/small/comp2.gif, www/icons/small/compressed.gif,
+	www/icons/small/continued.gif, www/icons/small/dir.gif,
+	www/icons/small/dir2.gif, www/icons/small/doc.gif,
+	www/icons/small/forward.gif, www/icons/small/generic.gif,
+	www/icons/small/generic2.gif, www/icons/small/generic3.gif,
+	www/icons/small/image.gif, www/icons/small/image2.gif,
+	www/icons/small/index.gif, www/icons/small/key.gif,
+	www/icons/small/movie.gif, www/icons/small/patch.gif,
+	www/icons/small/ps.gif, bin/yaws, scripts/Makefile, scripts/mangle,
+	scripts/yaws.conf, scripts/yaws.conf.template, scripts/yaws.ss,
+	www/icons/small/rainbow.gif, www/icons/small/sound.gif,
+	www/icons/small/sound2.gif, www/icons/small/tar.gif,
+	www/icons/small/text.gif, www/icons/small/transfer.gif,
+	www/icons/small/unknown.gif, www/icons/small/uu.gif: Initial
+	revision
+
