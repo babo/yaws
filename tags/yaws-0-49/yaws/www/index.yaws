@@ -1,0 +1,79 @@
+
+
+
+<erl>
+
+out(A) -> 
+    yaws_api:ssi(A#arg.docroot, ["/HEAD", "/TOPTAB"]).
+
+</erl>
+
+
+
+<H2>Yaws</H2>
+
+
+Yaws is a HTTP high perfomance 1.1 webserver.
+Two separate modes of operations are supported.
+<br>
+<ul>
+<li> Standalone mode where yaws runs as a regular webserver daemon. This is the default mode.
+<li> Embedded mode wher Yaws runs as an embedded webserver in an
+another erlang application. 
+</ul>
+
+<br>
+Yaws is entirely written in <a href="http:www.erlang.org">Erlang</a>, 
+futhermore it is a multithreaded webserver where one Erlang light weight 
+process is used to handle each client.
+<br>
+
+Yaws has excellent capabilies to generate dynamic content. Erlang code
+can be embedded into the HTML code in manner similar 
+to <a href="http://www.php.net">php</a>. As matter of fact, the 
+ad-hockery of php was one of major reasons I started the Yaws project.
+
+<p>Furthermore, Yaws has excellent performance and is able to
+ship several thousands of dynamically generated pages per second.
+
+
+<p>
+<h2>yaws.hyber.org</h2>
+
+The homepage of Yaws is <a href="http://yaws.hyber.org">yaws.hyber.org</a>.
+Statistics for that site is obtained by a yaws page that directly interacts 
+with the server producing <a href="http://yaws.hyber.org/stats.yaws">stats</a>.
+<p>
+The documentation, examples as well as releases can be found there, and 
+of cource, <a href="http://yaws.hyber.org">yaws.hyber.org</a> is itself
+powered by Yaws.
+
+
+<p> <h2> News </h2>
+
+<div class="box"> 
+
+<ul>
+
+<li> Jun 13, version 0.48 released. It contains a complete rewrite
+of the API to generate dynamic content which makes it much easier 
+to use. 
+<p>Furthermore this version accumulates output into larger chunks which makes
+it much faster the earlier versions. We can now serve 2500 dynamically
+generated HTML pages per second on a 2GhZ machine.
+<p>A bug with  iso 8859 chars in urls has been fixed.
+<p>Etag header for static content and Cache-Control header for dynamic.
+<p>Additional docs in the form of man pages.
+
+
+<li> Version 0.40 released. Contains bugfixes and full SSL support
+as well as an embryo to WWW-Authenticate support.
+</ul>
+
+</div>
+
+
+
+<erl>
+out(A) -> yaws_api:ssi(A#arg.docroot, ["/END"]).
+</erl>
