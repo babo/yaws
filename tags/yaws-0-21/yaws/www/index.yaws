@@ -1,0 +1,82 @@
+
+
+
+<erl>
+
+out(A) -> 
+    yaws_api:ssi(A#arg.docroot, ["/HEAD", "/TOPTAB"]).
+
+</erl>
+
+
+
+<H2>Yaws</H2>
+
+
+Yaws is a HTTP 1.1
+webserver currently under rapid development. 
+Two separate modes of operations are supported.
+<br>
+<ul>
+<li> Standalone mode where yaws runs as a regular webserver daemon. This is the default mode.
+<li> Embedded mode wher Yaws runs as an embedded webserver in an
+another erlang application. 
+</ul>
+
+<br>
+Yaws is entirely written in <a href="http:www.erlang.org">Erlang</a>, 
+futhermore it is a multithreaded webserver where one Erlang light weight 
+process is used to handle each client.
+<br>
+
+Yaws has excellent capabilies to generate dynamic content. Erlang code
+can be embedded into the HTML code in manner similar 
+to <a href="http://www.php.net">php</a>. As matter of fact, the 
+ad-hockery of php was one of major reasons I started the Yaws project.
+
+
+
+<p>
+<h2>yaws.hyber.org</h2>
+
+The homepage of Yaws is <a href="http://yaws.hyber.org">yaws.hyber.org</a>.
+Statistics for that site is obtained by a yaws page that directly interacts 
+with the server producing <a href="http://www.hyber.org/stats.yaws">stats</a>.
+<p>
+The documentation, examples as well as releases can be found there, and 
+of cource, <a href="http://yaws.hyber.org">yaws.hyber.org</a> is itself
+powered by Yaws.
+
+
+
+<h2>Build and install</h2>
+
+Yaws is hosted by the excellent source code site SourceForge <a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=45637&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo"></a>. 
+The SourceForge www page is <a href="http://sourceforge.net/projects/erlyaws/">http://sourceforge.net/projects/erlyaws</a>
+
+
+
+
+<p>To cvs check out the latest source first install 
+an <a href="http://www.erlang.org">Erlang</a> system, then do:
+
+
+<pre>
+
+# export CVS_RSH=ssh 
+# cvs -d:pserver:anonymous@cvs.erlyaws.sourceforge.net:/cvsroot/erlyaws login
+# cvs -z3 -d:pserver:anonymous@cvs.erlyaws.sourceforge.net:/cvsroot/erlyaws co .
+# cd yaws; make; make install
+</pre>
+
+Will checkout the bleeding edge source, build it and install it at
+127.0.0.1:80 with the docroot set to the local documentation.
+
+<p>
+Just make, will create a server which listens to localhost:8000.
+<br>
+
+
+<erl>
+out(A) -> yaws_api:ssi(A#arg.docroot, ["/END"]).
+</erl>
